@@ -190,3 +190,30 @@ b < 0 &: a^b = \frac{1}{\underbrace{a * a * a * ... * a}_{b-mal}}
 ```
 
 Bei dieser Aufgabe darf die Klasse Math und deren Methoden nicht verwendet werden.
+
+## Übungsblatt 6
+
+### Aufgabe 1: (π-Rechtecknäherung) (1 Punkt)
+
+Schreiben Sie ein Programm, das die Zahl π mittels der in der Vorlesung besprochenen Rechtecknäherung annähert. Der Benutzer soll die Anzahl der zu verwendenden Rechtecke eingeben können.
+
+### Aufgabe 2: (Runden) (1 Punkt)
+
+- Schreiben Sie eine Methode, die eine übergebene Zahl auf- oder abrundet. Beispiele: 3,2 wird auf 3 abgerundet, 3,5 auf 4 aufgerundet.
+- Schreiben Sie eine weitere Methode, welche eine übergebene Zahl auf eine bestimmte Anzahl Nachkommastellen rundet. Die Anzahl der Nachkommastellen soll anhand eines zusätzlich übergebenen Parameters bestimmt werden können.
+
+Hinweis: Die Verwendung sämtlicher Methoden aus der Klasse Math ist untersagt!
+
+### Aufgabe 3: (Fakultät) (1 Punkt)
+
+Schreiben Sie eine Methode, welche die Fakultät mit Hilfe einer Schleife (nicht rekursiv) berechnet. Testen Sie die Methode, indem Sie ein Programm schreiben, das vom Benutzer eine Zahl einliest und ihre Fakultätsmethode aufruft.
+
+### Aufgabe 4: (Dreieck) (1 Punkt)
+
+Schreiben Sie eine Methode, die ein Dreieck aus Sternen ausgibt. Die Methode soll ein Argument entgegennehmen, das festlegt, wie viele Zeilen ausgegeben werden sollen. In der rechten Abbildung sehen Sie eine Beispielausgabe für 5 Zeilen. Beachten Sie bitte, dass zwischen den einzelnen Sternen ein Leerzeichen ausgegeben wird.
+
+Hinweis: Versuchen Sie zunächst das Dreieck in der linken Abbildung auszugeben. Passen Sie dann Ihr Programm so an, dass das Dreieck auf der rechten Seite herauskommt!
+
+| Linkes Dreieck                          | Rechtes Dreieck                         |
+| :---                                    | :----:                                  |
+| * <br> ** <br> *** <br> **** <br> ***** | * <br> ** <br> *** <br> **** <br> ***** |
