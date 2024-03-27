@@ -282,3 +282,55 @@ Testen Sie ihr Programm mit den Werten aus obigem Szenario.
 ### Aufgabe 4: (Standardabweichung) (1 Punkt)
 
 Ergänzen Sie Ihr Programm aus Aufgabe 3 um die Berechnung der Standardabweichung.
+
+## Übungsblatt 8
+
+### Aufgabe 1: (Lottoziehung) (1 Punkt)
+
+Schreiben Sie ein Programm, das die Ziehung der Lottozahlen simuliert, die Zahlen in einem Feld ablegt und anschließend die gezogenen Lottozahlen nach dem in der Vorlesung vorgestellten Sortier-Verfahren sortiert. Es dürfen keine doppelten Lottozahlen vorliegen. Die sortierten Lottozahlen sollen anschließend ausgegeben werden.
+
+Hinweis: Die Verwendung von Sortier-Methoden aus der Java-Bibliothek ist untersagt!
+
+### Aufgabe 2: (Array) (1 Punkt)
+
+Kinder spielen gerne das B-Sprachen-Spiel. Die B-Sprache funktioniert so, dass an jeden Vokal (a,e,i,o,u) eines Wortes ein b plus die Wiederholung des Vokals angefügt wird. Schreiben Sie eine Methode namens spielen, die ein normales Wort entgegennimmt (Parameterdatentyp: String) und in ein Wort der B-Sprache übersetzt und dieses zurückgibt.
+
+Beispiel:
+> übergebene Zeichenfolge: spiel mit mir  
+> zurückgelieferte Zeichenfolge: spibiebel mibit mibir
+
+Hinweise:
+- Verwenden Sie zur Lösung der Aufgabe keine Methoden der Klasse String außer `toCharArray()` und `String.valueOf()`!
+- Wandeln Sie den an die Methode übergebenen String mit `toCharArray()` in ein char-Array um!
+- Ermitteln Sie, wie lang der zurückzugebende String sein muss und erzeugen Sie ein neues char-Array der entsprechenden Länge.
+- Speichern Sie in diesem char Array das Wort der B-Sprache.
+- Wandeln Sie das neue char-Array mit `String.valueOf()` zurück in einen String um und geben Sie diesen zurück.
+
+### Aufgabe 3: (Parameterübergabe durch Kommandozeile) (1 Punkt)
+
+Schreiben Sie ein Programm, dem bei Programmstart zwei Zahlen auf der Kommandozeile/Eingabeaufforderung als Argumente übergeben werden. Die Zahlen sollen dann miteinander multipliziert werden und das Ergebnis ausgegeben werden. Überprüfen Sie, ob genau zwei Argumente bei Programmstart mitgegeben werden, ansonsten soll eine aussagekräftige Fehlermeldung angezeigt werden.
+
+### Aufgabe 4: (Galgenmännchen) (1 Punkt)
+
+Entwickeln Sie das Spiel Galgenmännchen. Der Benutzer soll eines von 20 im Programm vordefinierten Wörtern als Unterstriche angezeigt bekommen.
+
+Beispiel:
+> Im Programm wurde das Wort „PROGRAMMIERSPRACHE“ ausgewählt, der Benutzer bekommt folgende Anzeige:
+> 
+> 1. Versuch: _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+> 
+> Jetzt darf er einen Buchstaben eingeben. Groß- und Kleinschreibung soll nicht unterschieden werden. Bei jeder Eingabe wird die Anzahl der Versuche hochgezählt. Wenn er also ein ‚z‘ eingibt, erfolgt folgende Ausgabe:
+> 
+> 2. Versuch: _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+> 
+> Gibt er einen Buchstaben ein, der im Wort vorhanden ist, wird jedes Vorkommen des Buchstabens angezeigt. Gibt bspw. der Benutzer ein ‚m‘ ein:
+> 
+> 3. Versuch: _ _ _ _ _ _ M M _ _ _ _ _ _ _ _ _
+> 
+> Nach dem 15. Versuch oder wenn das Wort komplett erraten wurde, sollen keine weiteren Eingaben erfolgen und das Programm abbrechen.
+
+Hinweis: Mit der Methode `toCharArray()` kann ein String in ein char[] umgewandelt werden: 
+```java
+String sentence = … 
+char[] chars = sentence.toCharArray();
+```
