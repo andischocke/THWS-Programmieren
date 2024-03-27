@@ -788,6 +788,8 @@ Ein Stack ist eine Datenstruktur, die zwei Primitive zur Verfügung stellt:
 - `push`: legt ein Element oben auf den Stack
 - `pop`: nimmt ein Element von oben vom Stack
 
+![SVG Image](https://upload.wikimedia.org/wikipedia/commons/e/e4/Lifo_stack.svg)
+
 Implementieren Sie eine Klasse `Stack`. Die Klasse `Stack` soll von der Klasse `ArrayList` erben und mit Hilfe der Methoden von `ArrayList`, die Methoden `pop` und `push` umsetzen. Auf den Stack sollen beliebige Objekte gelegt werden können. Die Klasse ArrayList stellt folgende Methoden zur Verfügung:
 - `add`: Appends the specified element to the end of this list.
 - `remove`: Removes the element at the specified position in this list. Shifts any subsequent elements to the left (subtracts one from their indices).
