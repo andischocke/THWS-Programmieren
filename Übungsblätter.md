@@ -806,3 +806,154 @@ Ein Mensch lässt sich modellieren, indem seine üblichen Tätigkeiten abgebilde
 Der Mensch schätzt die Situation allerdings in 25% der Fälle nicht genau ein und ist `UNENTSCHIEDEN`. Die Entscheidungen sollen auch durch ein enum mit den Werten: `RECHTS`, `LINKS`, `BREMSEN`, `UNENTSCHIEDEN` abgebildet werden.
 
 Ein Cyborg ist sowohl ein Mensch als auch ein Roboter. Trotz des Stresses den das Aufladen, Essen, Warten, Schlafen, etc. mit sich bringt, fährt auch ein Cyborg gerne Auto und wird dort Gefahrensituationen ausgesetzt. Wenn sich der Menschanteil und der Roboteranteil in ihrer Entscheidung einig sind, trifft der Cyborg die gleiche Entscheidung. Wenn der Menschanteil und der Roboteranteil unterschiedlicher Ansicht sind, dann trifft der Cyborg zufällig eine der beiden Entscheidungen.
+
+## Übungsblatt 14
+
+#### Aufgabe 1: (Klasseninvarianten)
+- Was ist eine Klasseninvariante (in einem Satz)?
+- Gegeben sei eine Klasse Person mit den Attributen `vorname` und `nachname`. Der Softwarevertrag zu der Klasse beinhaltet, dass Vorname und Nachname immer gesetzt sein müssen. Formulieren Sie die entsprechende Klasseninvariante.
+- Gegeben ist die Klasse `Person`. Durch Aufruf der init()‐Methode wird `vorname` und `nachname` des Personenobjekts anhand der übergebenen id durch Daten aus einer Datei befüllt. Weshalb wird die Klasseninvariante durch folgende Implementierung verletzt?
+```java
+public class Person {
+    private String vorname;
+    private String nachname;
+
+    public Person() {
+    }
+
+    public void init(String id) {
+        // Implementation goes here
+    }
+
+    public String getVorname() {
+        return vorname;
+    }
+
+    public String getNachname() {
+        return nachname;
+    }
+}
+```
+- Die Personen‐Klasse wurde durch setter ergänzt. Wie kann die Klasseninvariante jetzt verletzt werden?
+```java
+public class Person {
+    private String vorname;
+    private String nachname;
+
+    public Person(String id) {
+        init(id);
+    }
+
+    public void init(String id) {
+        // Implementation goes here
+    }
+
+    public String getVorname() {
+        return vorname;
+    }
+
+    public String getNachname() {
+        return nachname;
+    }
+
+    public void setVorname(String vorname) {
+        this.vorname = vorname;
+    }
+
+    public void setNachname(String nachname) {
+        this.nachname = nachname;
+    }
+}
+```
+
+#### Aufgabe 2: (Komplexe Datentypen vs. Klassen)
+Legen Sie ein package `prozedural` an! Erstellen Sie je einen komplexen Datentypen für einen `Kreis` und für ein `Quadrat` in dem package `prozedural`. Schreiben Sie ferner eine Klasse `Flächenberechner`, die eine Methode `berechneFläche` anbietet. Die Methode soll ein Object entgegennehmen. Egal ob das übergebene Object ein `Kreis` oder ein `Quadrat` ist, soll die entsprechende Fläche korrekt berechnet und zurückgegeben werden. Legen Sie in einem Hauptprogramm ein Objekt von `Kreis` an und lassen Sie die Fläche berechnen.
+- Fügen Sie einen weiteren komplexen Datentyp namens `Rechteck` im package `prozedural` ein. Erweitern Sie Ihre Klassen im package um die Berechnung der Fläche des `Rechtecks`. Erweitern Sie Ihre Klassen im package, um die Berechnung des Umfangs für `Rechteck`, `Kreis` und `Quadrat`.
+
+Hinweis: Ob ein Objekt von der Klasse Kreis ist, lässt sich bspw. wie folgt überprüfen:
+```java
+Object o;
+// Some code here...
+
+if (o.getClass() == Kreis.class) {
+    // Do something if o is an instance of Kreis class
+}
+```
+Legen Sie ein package `oo` an! Legen Sie eine Klasse `Circle` und eine Klasse `Square` in dem package `oo` an. Die Klassen sollen von einem gemeinsamen Interface `Shape`, die Methode `calculateArea()` korrekt implementieren. Legen Sie in einem Hauptprogramm ein Objekt von `Circle` an und lassen Sie die Fläche berechnen.
+- Ergänzen Sie im package `oo` eine Klasse `Rectangle`. Erweitern Sie Ihre Klassen im package um die Berechnung der Fläche des `Rectangle`. Erweitern Sie Ihre Klassen im package, um die Berechnung des Umfangs für `Square`, `Circle` und `Rectangle`.
+
+Vergleichen Sie beide Ansätze!
+
+#### Aufgabe 3: (Vorbedingungen und Nachbedingungen)
+
+Was sind sinnvolle Vor‐ und Nachbedingungen für die folgenden Methoden/Klasse?
+```java
+public static int potenz(int basis, int exponent) {
+    int ergebnis = 1; // neutrales Element der Multiplikation
+    for (int i = 1; i <= exponent; i++) {
+        ergebnis = ergebnis * basis;
+    }
+    return ergebnis;
+}
+```
+```java
+public static void bubbleSort(int... numArray) {
+    int n = numArray.length;
+    int temp;
+
+    for (int i = 0; i < n; i++) {
+        for (int j = 1; j < n - i; j++) {
+            if (numArray[j - 1] > numArray[j]) {
+                temp = numArray[j - 1];
+                numArray[j - 1] = numArray[j];
+                numArray[j] = temp;
+            }
+        }
+    }
+}
+```
+```java
+public class Rechteck {
+    double laenge;
+    double breite;
+
+    public Rechteck(double laenge, double breite) {
+        this.laenge = laenge;
+        this.breite = breite;
+    }
+
+    public double berechneFlaeche() {
+        return laenge * breite;
+    }
+}
+```
+
+#### Aufgabe 4: (Liskovsches Substitutionsprinzip)
+Gegeben sei ein Interface List mit den Methoden:
+- `add`, die den übergebenen String in die Liste einfügt
+- `remove`, die den übergebenen String aus der Liste entfernt
+- `size`, die die Länge der Liste zurückgibt
+
+Weiterhin gebe es eine Implementierung des Interfaces namens NaturallyOrderedList, die das Interface wie folgt umsetzt:
+- `add`: fügt einen String an das Ende der Liste ein
+- `remove`: entfernt den ersten String, der dem übergebenen String entspricht, aus der Liste
+- `size`: gibt die Länge der Liste zurück
+
+Sie wollen nun eine Liste (SortedList) implementieren, die die Strings nach dem Alphabet (bzw. Unicode) sortiert vorhält. Dazu erben Sie von NaturallyOrderedList und überschreiben die add‐Methode in der folgenden Weise: Sie rufen zunächst die add‐Methode der Oberklasse auf. Danach sortieren Sie die gesamte Liste.
+```mermaid
+classDiagram
+    class List {
+        <<interface>>
+        + boolean add(String s)
+        + boolean remove(String s)
+        + int size()
+    }
+    class NaturallyOrderedList {
+    }
+    class SortedList {
+    }
+
+    List <|-- NaturallyOrderedList
+    NaturallyOrderedList <|-- SortedList
+```
+Verstößt diese Implementierung gegen das Liskovsche Substitutionsprinzip (LSP)? Wenn ja, warum und wie kann man diesen Verstoß umgehen? Wenn nein, begründen Sie, warum das LSP eingehalten wird!
