@@ -1,27 +1,29 @@
 # Übungsblätter
 Alle Übungsblätter mit Aufgaben aus den Modulen "Programmieren 1" und "Programmieren 2", die an der Technischen Hochschule Würzburg-Schweinfurt angeboten werden.
 
-## Übungsblatt 1
+## Programmieren 1
 
-### Aufgabe 1: (0 Punkte)
+### Übungsblatt 1
+
+#### Aufgabe 1: (0 Punkte)
 
 - Installieren Sie auf Ihrem eigenen Computer/Notebook das Java Development Kit (JDK) von Oracle. Ergänzen Sie die Umgebungsvariable PATH um das bin-Verzeichnis der JDK Installation.
 - Rufen Sie ein Konsolenfenster auf, z. B. Start -> Ausführen -> cmd und testen Sie die Befehle javac und java. Wenn beide Befehle ausgeführt wurden, haben Sie das JDK richtig konfiguriert.
 
-### Aufgabe 2: (2 Punkte)
+#### Aufgabe 2: (2 Punkte)
 
 Erstellen Sie eine Datei Application.java, die bei Ausführung "Willkommen zu Programmieren 1" ausgibt.
 
 - Übersetzen und starten Sie das Programm auf der Konsole! Dokumentieren Sie stichpunktartig die dazu notwendigen Schritte! (1 Punkt)
 - Übersetzen und starten Sie das Programm mit Eclipse! Dokumentieren Sie stichpunktartig die dazu notwendigen Schritte! (1 Punkt)
 
-### Aufgabe 3: (1 Punkt)
+#### Aufgabe 3: (1 Punkt)
 
 Schreiben Sie ein Programm, welches folgenden Term korrekt berechnet und das Ergebnis ausgibt: $3 * (9 + 3) + 4 * 8$
 
-## Übungsblatt 2
+### Übungsblatt 2
 
-### Aufgabe 1: (1 Punkt) 
+#### Aufgabe 1: (1 Punkt) 
 
 Gegeben sei folgendes Programm:
 ```java
@@ -47,13 +49,13 @@ public class Tausch {
 ```
 Tauschen Sie die Inhalte der beiden Variablen, d. h. wenn vor dem Tausch x den Wert 5 hatte und y den Wert 7, dann soll x nach dem Tausch den Wert 7 haben und y den Wert 5. Führen Sie den Tausch so durch, dass der Tausch funktioniert, egal mit welchem Wert x und y initialisiert werden.
 
-### Aufgabe 2: (1 Punkt)
+#### Aufgabe 2: (1 Punkt)
 
 Schreiben Sie ein Programm, das – bei gegebenem Radius r eines Kreises – die Kreisfläche $(πr^2)$ und den Kreisumfang $(2πr)$ berechnet und auf der Standardausgabe mit Hinweistext ausgibt. 
 
 Wie groß wäre das Volumen, falls es sich statt eines Kreises um eine Kugel $(\frac{4}{3}πr^3)$ handelt? Berechnen Sie das Volumen und geben Sie es aus! Sie können die Kreis- und die Kugelberechnungen im gleichen Programm stattfinden lassen.
 
-### Aufgabe 3: (1 Punkt)
+#### Aufgabe 3: (1 Punkt)
 
 Zur Lösung quadratischer Gleichungen der Form $x^2 + px + q = 0$ wird die pq-Formel verwendet:
 ```math
@@ -61,7 +63,7 @@ x_{1,2} = - \frac{p}{2} \pm \sqrt{\left( \frac{p}{2} \right)^2 - q}
 ```
 Schreiben Sie ein Programm, das bei Angabe der Variablen p und q die beiden Lösungen für x ausrechnet! Recherchieren Sie mit einer Suchmaschine, mit welchem Befehl in Java eine Wurzel gezogen werden kann.
 
-### Aufgabe 4: (1 Punkt)
+#### Aufgabe 4: (1 Punkt)
 
 Schreiben Sie ein Programm, das die Variablen „stunden“, „minuten“ und „sekunden“ enthält. Initialisieren Sie die Variablen mit der aktuellen Uhrzeit.
 
@@ -69,17 +71,17 @@ Schreiben Sie ein Programm, das die Variablen „stunden“, „minuten“ und �
 - Berechnen Sie die Anzahl der verbleibenden Sekunden für diesen Tag und geben Sie diese aus!
 - Berechnen Sie, wie viel Prozent des Tages schon vergangen sind und geben Sie das Ergebnis aus! Die Prozentangabe soll auf mehrere Nachkommastellen genau angegeben werden.
 
-## Übungsblatt 3
+### Übungsblatt 3
 
-### Aufgabe 1: (Modulo) (1 Punkt)
+#### Aufgabe 1: (Modulo) (1 Punkt)
 
 Schreiben Sie ein Programm, welches vom Benutzer eine ganze Zahl einliest und mithilfe des Modulo-Operators überprüft, ob die Zahl durch 7 teilbar ist. Anschließend soll eine entsprechende Ausgabe auf der Standardausgabe erfolgen. Was passiert, wenn der Modulo Operator auf negative Zahlen angewendet wird? Schreiben Sie die zugehörige Vorzeichentabelle auf.
 
-### Aufgabe 2: (Pizzarechner) (1 Punkt)
+#### Aufgabe 2: (Pizzarechner) (1 Punkt)
 
 Auf einer Pizzakarte werden Pizzen oft in unterschiedlichen Durchmessern (26cm, 28cm, 30cm) zu unterschiedlichen Preisen angeboten. Schreiben Sie ein Programm, das von zwei Pizzen jeweils den Durchmesser und den Preis einliest. Das Programm soll die Fläche der Pizza ausrechnen und daraufhin ausgeben, welche Pizza das bessere Größen-/Preisverhältnis hat. Vorgehensweise: Belegen Sie zunächst die Variablen mit festen Werten und implementieren Sie die Berechnung und die Ausgabe. Wenn alles soweit läuft, fügen Sie das Einlesen der Werte hinzu. So müssen Sie nicht bei jedem Testlauf erneut die Werte eingeben.
 
-### Aufgabe 3: (Einzelzeichen) (1 Punkt)
+#### Aufgabe 3: (Einzelzeichen) (1 Punkt)
 
 Schreiben Sie ein Programm, das ein Einzelzeichen einliest. Ist das Einzelzeichen 
 - ein Großbuchstabe, soll das Wort "Großbuchstabe" ausgegeben werden.
@@ -89,13 +91,13 @@ Schreiben Sie ein Programm, das ein Einzelzeichen einliest. Ist das Einzelzeiche
 
 Fällt ein Einzelzeichen in mehrere Kategorien, sollen alle passenden Ausgaben erscheinen. Fällt ein Einzelzeichen in keine der Kategorien, soll die Ausgabe „Unbekannt“ erfolgen.
 
-### Aufgabe 4: (Würfelwurf) (1 Punkt)
+#### Aufgabe 4: (Würfelwurf) (1 Punkt)
 
 Der Befehl Math.random() gibt eine zufällige Double-Zahl zwischen 0 (inklusive) und 1 (exklusive) zurück. Für eine zurückgegebene Zahl x gilt also 𝑥 ∈ [0..1). Simulieren Sie den Wurf eines 6-seitigen Würfels. Wenn eine 1 gewürfelt wurde, soll der Text "Eins gewürfelt" ausgegeben werden, bei einer 2 "Zwei gewürfelt", etc.
 
-## Übungsblatt 4
+### Übungsblatt 4
 
-### Aufgabe 1: (Freier Fall) (1 Punkt)
+#### Aufgabe 1: (Freier Fall) (1 Punkt)
 
 Die zurückgelegte Strecke eines frei fallenden Körpers berechnet sich nach folgender Formel: $s(t) = \frac{1}{2} g * t^2$, wobei g die Fallbeschleunigung $(9.80665 \frac{m}{s^2})$ und t die vergangene Zeit in Sekunden darstellt. Schreiben Sie ein Programm, welches die zurückgelegte Strecke im Sekundentakt, wie im Beispiel gezeigt, ausgibt. Die Falldauer soll vom Benutzer eingegeben werden.
 
@@ -108,7 +110,7 @@ Beispiel:
 
 Modifizieren Sie das Programm, so dass nur für jede fünfte Sekunde eine Ausgabe erfolgt! Beginnen Sie bei der Ausgabe mit der ersten Sekunde, gefolgt von der sechsten Sekunde.
 
-### Aufgabe 2: (Reihenberechnung) (1 Punkt)
+#### Aufgabe 2: (Reihenberechnung) (1 Punkt)
 
 Gegeben sei folgende Reihe:
 ```math
@@ -116,7 +118,7 @@ Gegeben sei folgende Reihe:
 ```
 Schreiben Sie die ersten fünf Glieder der Reihe auf Papier auf Ihrer schriftlichen Lösung auf! Schreiben Sie ein Programm, welches die Reihe berechnet und das Ergebnis bei jedem Schleifendurchlauf ausgibt. Brechen Sie die Berechnung ab, wenn die Änderung des Reihenwertes in einem Schleifendurchlauf kleiner als $10^{-5}$ ist.
 
-### Aufgabe 3: (Das kleine Einmaleins) (1 Punkt)
+#### Aufgabe 3: (Das kleine Einmaleins) (1 Punkt)
 
 Schreiben Sie ein Programm, welches das kleine 1x1 ausgibt. Hinweis: Beginnen Sie damit zunächst die ersten zehn Produkte mit Hilfe einer Schleife auszugeben, d.h. 1x1=1, 1x2=2, … 1x9=9, 1x10=10.
 
@@ -133,7 +135,7 @@ Ausgabe:
 > 10 x 9 = 90  
 > 10 x 10 = 100  
 
-### Aufgabe 4: (Primzahlen) (1 Punkt)
+#### Aufgabe 4: (Primzahlen) (1 Punkt)
 
 Schreiben Sie ein Programm, welches für eine vom Benutzer eingegebene ganze Zahl ermittelt, ob diese eine Primzahl ist.
 
@@ -145,9 +147,9 @@ Beispiel 2:
 > Bitte zu untersuchende Zahl eingeben: 51  
 > Untersuchte Zahl ist keine Primzahl
 
-## Übungsblatt 5
+### Übungsblatt 5
 
-### Aufgabe 1: (Temperaturtabelle) (1 Punkt)
+#### Aufgabe 1: (Temperaturtabelle) (1 Punkt)
 
 Schreiben Sie ein Programm namens Temperaturumwandlung, das eine Temperaturtabelle auf dem Bildschirm gemäß der Formel $Grad \\ Celsius = \frac{5}{9} * (Grad \\ Fahrenheit - 32)$ ausgibt. Die Temperaturtabelle soll in der ersten Spalte Temperaturwerte in Fahrenheit (als ganze Zahl von 0 Grad Fahrenheit bis 300 Fahrenheit, jeweils inklusive) enthalten und in der zweiten Spalte die entsprechenden Temperaturwerte in Celsius (vom Typ float) auf zwei Nachkommastellen abgeschnitten oder gerundet.
 
@@ -162,7 +164,7 @@ Schreiben Sie ein Programm namens Temperaturumwandlung, das eine Temperaturtabel
 
 Die Spalten sollen durch ein Tabulatorzeichen getrennt werden, ansonsten muss die Tabelle nicht formatiert sein.
 
-### Aufgabe 2: (Querprodukt) (1 Punkt)
+#### Aufgabe 2: (Querprodukt) (1 Punkt)
 
 Schreiben Sie ein Programm namens Querprodukt, welches das "Querprodukt" einer int-Zahl berechnet und dieses mit einer Meldung am Bildschirm anzeigt. Die int-Zahl soll von der Standardeingabe solange eingelesen werden, bis sie gültig ist (zwischen 0 und einer Million, jeweils inklusive). Bei Eingabe einer ungültigen int-Zahl soll zusätzlich eine Fehlermeldung erscheinen und ein erneutes Einlesen erfolgen.
 
@@ -174,11 +176,11 @@ Beispiel:
 > Geben Sie bitte eine Zahl ein: 3225  
 > Das Querprodukt der Zahl 3225 beträgt 60  
 
-### Aufgabe 3: (Modellierung) (1 Punkt)
+#### Aufgabe 3: (Modellierung) (1 Punkt)
 
 Modellieren Sie schriftlich mit einem Struktogramm oder einem Aktivitätsdiagramm die Querproduktaufgabe!
 
-### Aufgabe 4: (Potenz) (1 Punkt)
+#### Aufgabe 4: (Potenz) (1 Punkt)
 
 Schreiben Sie ein Programm das die Potenz $a^b$ berechnet und das Ergebnis auf der Standardausgabe anzeigt. Sowohl die Basis $(a)$, als auch der Exponent $(b)$ werden über die Standardeingabe (a vom Typ double, b vom Typ int) eingelesen. In Abhängigkeit vom Exponenten $(b)$ gilt für $a^b$:
 ```math
@@ -191,24 +193,24 @@ b < 0 &: a^b = \frac{1}{\underbrace{a * a * a * ... * a}_{b-mal}}
 
 Bei dieser Aufgabe darf die Klasse Math und deren Methoden nicht verwendet werden.
 
-## Übungsblatt 6
+### Übungsblatt 6
 
-### Aufgabe 1: (π-Rechtecknäherung) (1 Punkt)
+#### Aufgabe 1: (π-Rechtecknäherung) (1 Punkt)
 
 Schreiben Sie ein Programm, das die Zahl π mittels der in der Vorlesung besprochenen Rechtecknäherung annähert. Der Benutzer soll die Anzahl der zu verwendenden Rechtecke eingeben können.
 
-### Aufgabe 2: (Runden) (1 Punkt)
+#### Aufgabe 2: (Runden) (1 Punkt)
 
 - Schreiben Sie eine Methode, die eine übergebene Zahl auf- oder abrundet. Beispiele: 3,2 wird auf 3 abgerundet, 3,5 auf 4 aufgerundet.
 - Schreiben Sie eine weitere Methode, welche eine übergebene Zahl auf eine bestimmte Anzahl Nachkommastellen rundet. Die Anzahl der Nachkommastellen soll anhand eines zusätzlich übergebenen Parameters bestimmt werden können.
 
 Hinweis: Die Verwendung sämtlicher Methoden aus der Klasse Math ist untersagt!
 
-### Aufgabe 3: (Fakultät) (1 Punkt)
+#### Aufgabe 3: (Fakultät) (1 Punkt)
 
 Schreiben Sie eine Methode, welche die Fakultät mit Hilfe einer Schleife (nicht rekursiv) berechnet. Testen Sie die Methode, indem Sie ein Programm schreiben, das vom Benutzer eine Zahl einliest und ihre Fakultätsmethode aufruft.
 
-### Aufgabe 4: (Dreieck) (1 Punkt)
+#### Aufgabe 4: (Dreieck) (1 Punkt)
 
 Schreiben Sie eine Methode, die ein Dreieck aus Sternen ausgibt. Die Methode soll ein Argument entgegennehmen, das festlegt, wie viele Zeilen ausgegeben werden sollen. In der rechten Abbildung sehen Sie eine Beispielausgabe für 5 Zeilen. Beachten Sie bitte, dass zwischen den einzelnen Sternen ein Leerzeichen ausgegeben wird.
 
@@ -218,15 +220,15 @@ Hinweis: Versuchen Sie zunächst das Dreieck in der linken Abbildung auszugeben.
 | :---                                              | :----:                                            |
 | * <br> * * <br> * * * <br> * * * * <br> * * * * * | * <br> * * <br> * * * <br> * * * * <br> * * * * * |
 
-## Übungsblatt 7
+### Übungsblatt 7
 
-### Aufgabe 1: (Rekursion) (1 Punkt)
+#### Aufgabe 1: (Rekursion) (1 Punkt)
 
 Schreiben Sie eine Methode, die $x^n$ rekursiv berechnet! Testen Sie ihre Methode, indem vom Anwender die Basis und der Exponent erfragt und eingegeben werden. Anschließend wird die Methode aufgerufen und das Ergebnis auf der Standardausgabe angezeigt.
 
 Hinweis: Machen Sie sich hierbei die mathematische Definition der Potenz zunutze: $x^0 = 1$, $x^{n+1} = x^n * x$, wobei $x \in \mathbb{R}, n \in \mathbb{N}$.
 
-### Aufgabe 2: (Sinusberechnung) (1 Punkt)
+#### Aufgabe 2: (Sinusberechnung) (1 Punkt)
 
 Schreiben Sie eine Methode, die den Sinus berechnet. Der Sinus kann durch folgende Reihe berechnet werden:
 ```math
@@ -237,7 +239,7 @@ Schreiben Sie zunächst die ersten fünf Glieder der Summe auf! Testen Sie ihre 
 
 Hinweis: Gehen Sie analog zu der Berechnung des Cosinus im Vorlesungsskript vor.
 
-### Erklärung zu den Aufgaben 3 und 4:
+#### Erklärung zu den Aufgaben 3 und 4:
 
 In der Statistik gibt es wichtige Größen zur Beurteilung von Messreihen. Die beiden vielleicht bedeutendsten Größen sind der Mittelwert (arithmetisches Mittel) und die Standardabweichung.
 
@@ -261,7 +263,7 @@ s' = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (x_i - \bar{x})^2}
 
 Ein Testszenario für die Aufgaben könnte wie folgt aussehen: Sie spielen Golf und üben den ersten Abschlag. Nach 10 Abschlägen messen Sie, wie nah die Bälle am Loch liegen und bekommen folgendes Ergebnis: 12m, 15m, 22m, 25m, 50m, 57m, 60m, 75m, 80m, 114m.
 
-### Aufgabe 3: (Arithmetisches Mittel, Maximum, Minimum) (1 Punkt)
+#### Aufgabe 3: (Arithmetisches Mittel, Maximum, Minimum) (1 Punkt)
 
 Schreiben Sie ein Programm, das eine Messreihe (d. h. eine beliebige Anzahl von Fließkommazahlen) einliest, die vom Anwender eingegeben werden. Die Anzahl ist zu Beginn vom Benutzer einzugeben und muss größer als 0 sein. Ansonsten terminiert das Programm mit einer Fehlermeldung. Ausgegeben werden soll am Ende das arithmetische Mittel der eingegebenen Zahlen, sowie der kleinste (Minimum) und der größte (Maximum) Wert.
 
@@ -279,19 +281,19 @@ Beispiel:
 
 Testen Sie ihr Programm mit den Werten aus obigem Szenario.
 
-### Aufgabe 4: (Standardabweichung) (1 Punkt)
+#### Aufgabe 4: (Standardabweichung) (1 Punkt)
 
 Ergänzen Sie Ihr Programm aus Aufgabe 3 um die Berechnung der Standardabweichung.
 
-## Übungsblatt 8
+### Übungsblatt 8
 
-### Aufgabe 1: (Lottoziehung) (1 Punkt)
+#### Aufgabe 1: (Lottoziehung) (1 Punkt)
 
 Schreiben Sie ein Programm, das die Ziehung der Lottozahlen simuliert, die Zahlen in einem Feld ablegt und anschließend die gezogenen Lottozahlen nach dem in der Vorlesung vorgestellten Sortier-Verfahren sortiert. Es dürfen keine doppelten Lottozahlen vorliegen. Die sortierten Lottozahlen sollen anschließend ausgegeben werden.
 
 Hinweis: Die Verwendung von Sortier-Methoden aus der Java-Bibliothek ist untersagt!
 
-### Aufgabe 2: (Array) (1 Punkt)
+#### Aufgabe 2: (Array) (1 Punkt)
 
 Kinder spielen gerne das B-Sprachen-Spiel. Die B-Sprache funktioniert so, dass an jeden Vokal (a,e,i,o,u) eines Wortes ein b plus die Wiederholung des Vokals angefügt wird. Schreiben Sie eine Methode namens spielen, die ein normales Wort entgegennimmt (Parameterdatentyp: String) und in ein Wort der B-Sprache übersetzt und dieses zurückgibt.
 
@@ -306,11 +308,11 @@ Hinweise:
 - Speichern Sie in diesem char Array das Wort der B-Sprache.
 - Wandeln Sie das neue char-Array mit `String.valueOf()` zurück in einen String um und geben Sie diesen zurück.
 
-### Aufgabe 3: (Parameterübergabe durch Kommandozeile) (1 Punkt)
+#### Aufgabe 3: (Parameterübergabe durch Kommandozeile) (1 Punkt)
 
 Schreiben Sie ein Programm, dem bei Programmstart zwei Zahlen auf der Kommandozeile/Eingabeaufforderung als Argumente übergeben werden. Die Zahlen sollen dann miteinander multipliziert werden und das Ergebnis ausgegeben werden. Überprüfen Sie, ob genau zwei Argumente bei Programmstart mitgegeben werden, ansonsten soll eine aussagekräftige Fehlermeldung angezeigt werden.
 
-### Aufgabe 4: (Galgenmännchen) (1 Punkt)
+#### Aufgabe 4: (Galgenmännchen) (1 Punkt)
 
 Entwickeln Sie das Spiel Galgenmännchen. Der Benutzer soll eines von 20 im Programm vordefinierten Wörtern als Unterstriche angezeigt bekommen.
 
@@ -335,9 +337,9 @@ String sentence = …
 char[] chars = sentence.toCharArray();
 ```
 
-## Übungsblatt 9
+### Übungsblatt 9
 
-### Aufgabe 1: (1 Punkt) (Klassen, Objekte)
+#### Aufgabe 1: (1 Punkt) (Klassen, Objekte)
 
 Schreiben Sie eine Klasse Auto, die folgende Eigenschaften aus der Realität abbildet:
 - Marke (VW, BMW, Audi,...)
@@ -347,11 +349,11 @@ Schreiben Sie eine Klasse Auto, die folgende Eigenschaften aus der Realität abb
 
 Schreiben Sie weiterhin eine Klasse, in der Sie Ihre drei Lieblingsautos anlegen, d.h., erstellen Sie drei Instanzen/Objekte der Klasse Auto und setzen Sie deren Attribute sinnvoll. Ermitteln Sie das Auto mit dem größten Hubraum von den dreien (ohne das Wissen, welches Sie aus der Erstellung der Objekte besitzen), und geben Sie die Daten dieses Autos aus!
 
-### Aufgabe 2: (1 Punkt) (Konstruktor)
+#### Aufgabe 2: (1 Punkt) (Konstruktor)
 
 Ergänzen Sie in der Klasse Auto einen Konstruktor, der es erlaubt, alle Attribute direkt bei der Erstellung des Objekts mitanzugeben. Schreiben Sie eine Methode `setHubraum(int ccm)`, die es erlaubt, von einer anderen Klasse aus, den Hubraum zu setzen. Stellen Sie sowohl im Konstruktor als auch in der Methode `setHubraum(int ccm)` sicher, dass der übergebene Hubraum gültig (größer als 0) ist. Im Konstruktor soll im ungültigen Fall der Hubraum auf 1600 gesetzt werden. In der Methode `setHubraum(int ccm)` soll im ungültigen Fall der bisherige Wert nicht verändert werden.
 
-### Aufgabe 3: (1 Punkt)(Pizza)
+#### Aufgabe 3: (1 Punkt)(Pizza)
 
 Erweitern Sie das Pizzabeispiel aus der Vorlesung, so dass eine Pizza mehrere beliebige Durchmesser/Preiskombinationen haben kann. Erstellen Sie dabei auch einen passenden Konstruktor. Schreiben Sie eine weitere Klasse, in der 5 Pizzen angelegt werden! Die Ausgabe der Speisekarte ist nicht gefordert!
 
@@ -368,7 +370,7 @@ Erweitern Sie das Pizzabeispiel aus der Vorlesung, so dass eine Pizza mehrere be
 | 51.    | Pizza Cipolla   | 3.50   | 4.50  | 10.00 |
 | 52.    | Pizza Schinken  | 3.50   | 4.50  | 10.00 |
 
-### Aufgabe 4: (1 Punkt) (einfacher Rechner)
+#### Aufgabe 4: (1 Punkt) (einfacher Rechner)
 
 Schreiben Sie ein Programm, das beliebig viele Zahlen als Programmparameter übergeben bekommen kann. Zusätzlich wird als letztes Zeichen ein "+" oder "-" übergeben. Lesen Sie alle Parameter ein und führen Sie eine Addition bzw. eine Subtraktion auf alle übergebenen Zahlen aus. Bei einer Subtraktion soll von der ersten Zahl subtrahiert werden. Sie können davon ausgehen, dass immer mindestens zwei Zahlen übergeben werden und dass nur die Operatoren + und - übergeben werden.
 
@@ -379,13 +381,13 @@ Beispiel:
 > java Parameterübergabe 10 2 3 –  
 > Ausgabe des Programms ist 5 $(= 10 - 2 - 3)$
 
-## Übungsblatt 10 (bzv-relevant)
+### Übungsblatt 10 (bzv-relevant)
 
-### Aufgabe 1: (1 Punkt) (Produktionszähler)
+#### Aufgabe 1: (1 Punkt) (Produktionszähler)
 
 Erweitern Sie die Klasse Auto (Übungsblatt 9 / Aufgabe 1 und 2) um eine static Variable, mit deren Hilfe die Anzahl der produzierten Autos gezählt wird. Schreiben Sie weiterhin eine Klassenmethode `berechneUmsatz(int durchschnittspreis)`, welche anhand des übergebenen durchschnittlichen Verkaufspreises den Bruttoumsatz der Fahrzeugproduktion berechnet und diesen zurückliefert.
 
-### Aufgabe 2: (1 Punkt) (Raum)
+#### Aufgabe 2: (1 Punkt) (Raum)
 
 Schreiben Sie eine Klasse Raum. Ein Raum hat eine Kennung, die ihn identifiziert (z.B. I.2.1), und kann eine maximale Anzahl an Studenten für eine Vorlesung beherbergen. Ferner soll ein Raum (für eine Vorlesung/Übung) belegbar sein und darüber Auskunft geben können, ob er gerade belegt ist oder nicht.
 
@@ -393,11 +395,11 @@ Schreiben Sie eine main-Methode, die zwei Räume anlegt, den Raum I.2.1 und den 
 
 Hinweis: Ob ein Raum belegbar ist oder nicht, lässt sich über eine bool’sche Variable darstellen.
 
-### Aufgabe 3: (1 Punkt) (Raum und Vorlesung)
+#### Aufgabe 3: (1 Punkt) (Raum und Vorlesung)
 
 Erweitern Sie Ihr Programm aus Aufgabe 2, um eine Klasse Vorlesung. Eine Vorlesung soll einen Namen haben, von einem Dozenten gehalten werden und einem Studiengang zugeordnet sein. Wenn ein Raum belegt wird, dann soll er mit einer bestimmten Vorlesung (also einem Objekt der Klasse Vorlesung) belegt werden. Wenn der Raum nach seiner Belegung gefragt wird, soll er die Vorlesung zurückgeben, mit der er gerade belegt ist. Wenn der Raum frei ist, soll er null zurückgeben.
 
-### Aufgabe 4: (1 Punkt) (Raum und Studenten)
+#### Aufgabe 4: (1 Punkt) (Raum und Studenten)
 
 An einer Hochschule, die in dieser Aufgabe nicht genannt werden möchte, sind alle Studenten mit einer Chipkarte ausgerüstet, die es zu jeder Zeit erlaubt, den Studierenden zu orten. Diese Information soll benutzt werden, um festzustellen, welche Studenten zu einem bestimmten Zeitpunkt in einem Raum sind.
 
@@ -407,15 +409,15 @@ Vorgehensweise: Ergänzen Sie im Raum als Attribut ein Array von Studenten. Erwe
 
 Schreiben Sie ein Testprogramm, das den Raum mit Studenten belegt, alle Studenten, die zum Zeitpunkt der Abfrage im Raum sind, ausgibt, und dann die Studenten wieder den Raum verlassen lässt.
 
-## Übungsblatt 11
+### Übungsblatt 11
 
-### Aufgabe 1: (Ausweis)
+#### Aufgabe 1: (Ausweis)
 
 - Schreiben Sie die Klasse Ausweis mit den Attributen Vorname, Nachname und Geschlecht. Neben einem parameterbehaftetem Konstruktor soll die Kasse die entsprechenden getter- und setter-Methoden besitzen. Weiterhin soll die Klasse die Methode `toString()` überschreiben, welche die Inhalte der Instanzattribute auf der Standardausgabe anzeigt. Erzeugen Sie zwei weitere Klassen Studentenausweis und Vereinsausweis, welche von der Klasse Ausweis abgeleitet sind, und weitere klassenspezifische Attribute besitzen. Weiterhin soll die geerbte Methode `toString()` in den Subklassen geeignet überschrieben werden.
 - Schreiben Sie eine Methode namens `erzeugeAusweise`, welche ein Feld erzeugt, in dem gleichzeitig bis zu 6 Instanzen von der Klasse Ausweis, Studentenausweis oder Vereinsausweis abgelegt werden können. Das Feld soll 2 Instanzen der Klasse Ausweis, 2 Instanzen der Klasse Studentenausweis und 2 Objekte der Klasse Vereinsausweis beinhalten. Der Rückgabewert der Methode ist das innerhalb der Methode erzeugte Feld.
 - Schreiben Sie eine private Methode namens `datenAusgabe`, welcher als Parameter ein Feld unbekannter Länge übergeben wird, in dem Objekte der Klasse Ausweis, Studentenausweis oder Vereinsausweis abgelegt sind. Im Rumpf der Methode sollen die Daten aller im Feld enthaltenen Objekte ausgegeben werden. Beachten Sie, dass nicht alle Feldelemente im übergebenen Feld zwingend belegt sein müssen. Für den Fall, dass Feldelemente nicht belegt sind, ist eine entsprechende Meldung in der Form: „Dieser Index \<index\> ist nicht belegt“ mit Angabe des Feldindex auszugeben.
 
-### Aufgabe 2: (Uhrzeit)
+#### Aufgabe 2: (Uhrzeit)
 
 Schreiben Sie eine Klasse namens Uhr, die die Uhrzeit (24-Stunden, Minuten, Sekunden) verwaltet und folgende Methoden enthält:
 
@@ -442,14 +444,14 @@ Vereinbaren Sie ein Feld `weltzeit` für 24 verschiedene Uhren. Erzeugen Sie ans
 
 Wie sieht die Schleife aus, um im Feld `weltzeit` aus vorheriger Teilaufgabe jede der 24 Uhrzeiten um 1 Sekunde hoch zu zählen?
 
-### Aufgabe 3: (Bahn-Modellierung)
+#### Aufgabe 3: (Bahn-Modellierung)
 
 Bei der Deutschen Bahn fahren verschiedene Zugtypen. Alle Zugtypen sollen über eine Lok und eine bestimmte Anzahl Wagons verfügen. Ein Wagon für Güter hat i.d.R. ein Fassungsvermögen und transportiert eine bestimmte Art an Gütern, z.B. Autos, Gefahrengut, o.ä. In einem Personenzug gibt es verschiedene Arten von Wagons: ein Bordbistro, ein Wagon für Passagiere und den Fahrradwagen. Hier hat jeder Wagon eine Anzahl Sitzplätze. In den ICEs und ICs können zusätzlich sogar Sitzplatzreservierungen durchgeführt werden.
 
 - Entscheiden Sie, welche Klassen inkl. Attribute Sie benötigen, um dieses Problem in einem Java Programm abzubilden.
 - Zeichnen Sie ein Diagramm, in welchem die Beziehungen (Vererbung, Komposition, Aggregation, Assoziation) zwischen den Klassen inkl. ihrer Attribute gezeigt werden.
 
-### Aufgabe 4: (Bahn-Implementierung)
+#### Aufgabe 4: (Bahn-Implementierung)
 
 Schreiben Sie ein Java Programm, mit dem ein Benutzer selbst einen Zug (modelliert in Aufgabe 3) zusammensetzen kann. D.h. der Benutzer soll in einem Menü wiederholt auswählen, welchen Wagon er als nächstes an den Zug anhängen möchte, z. B.:
 > 1:  Lok hinzufügen  
