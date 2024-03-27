@@ -406,3 +406,57 @@ Ergänzen Sie die Klasse Raum (aus Aufgabe 2) so, dass er Studenten erfassen kan
 Vorgehensweise: Ergänzen Sie im Raum als Attribut ein Array von Studenten. Erweitern Sie den Raum, um eine Methode `betreteRaum()`, und übergeben Sie beim Aufruf der Methode den Studenten, der den Raum betritt, und speichern Sie ihn im Array. Gehen Sie analog für eine Methode `verlasseRaum()` vor.
 
 Schreiben Sie ein Testprogramm, das den Raum mit Studenten belegt, alle Studenten, die zum Zeitpunkt der Abfrage im Raum sind, ausgibt, und dann die Studenten wieder den Raum verlassen lässt.
+
+## Übungsblatt 11
+
+### Aufgabe 1: (Ausweis)
+
+- Schreiben Sie die Klasse Ausweis mit den Attributen Vorname, Nachname und Geschlecht. Neben einem parameterbehaftetem Konstruktor soll die Kasse die entsprechenden getter- und setter-Methoden besitzen. Weiterhin soll die Klasse die Methode `toString()` überschreiben, welche die Inhalte der Instanzattribute auf der Standardausgabe anzeigt. Erzeugen Sie zwei weitere Klassen Studentenausweis und Vereinsausweis, welche von der Klasse Ausweis abgeleitet sind, und weitere klassenspezifische Attribute besitzen. Weiterhin soll die geerbte Methode `toString()` in den Subklassen geeignet überschrieben werden.
+- Schreiben Sie eine Methode namens `erzeugeAusweise`, welche ein Feld erzeugt, in dem gleichzeitig bis zu 6 Instanzen von der Klasse Ausweis, Studentenausweis oder Vereinsausweis abgelegt werden können. Das Feld soll 2 Instanzen der Klasse Ausweis, 2 Instanzen der Klasse Studentenausweis und 2 Objekte der Klasse Vereinsausweis beinhalten. Der Rückgabewert der Methode ist das innerhalb der Methode erzeugte Feld.
+- Schreiben Sie eine private Methode namens `datenAusgabe`, welcher als Parameter ein Feld unbekannter Länge übergeben wird, in dem Objekte der Klasse Ausweis, Studentenausweis oder Vereinsausweis abgelegt sind. Im Rumpf der Methode sollen die Daten aller im Feld enthaltenen Objekte ausgegeben werden. Beachten Sie, dass nicht alle Feldelemente im übergebenen Feld zwingend belegt sein müssen. Für den Fall, dass Feldelemente nicht belegt sind, ist eine entsprechende Meldung in der Form: „Dieser Index \<index\> ist nicht belegt“ mit Angabe des Feldindex auszugeben.
+
+### Aufgabe 2: (Uhrzeit)
+
+Schreiben Sie eine Klasse namens Uhr, die die Uhrzeit (24-Stunden, Minuten, Sekunden) verwaltet und folgende Methoden enthält:
+
+- Uhr (int std, int min, int sek)  
+Ist einziger Konstruktor. Setzt die Uhrzeit auf die angegebenen Paramter. Falls mind. einer der Parameter ungültig ist, soll die Uhrzeit auf genau 12:00:00 (= 1200  Uhr und 0 Sekunden) gesetzt werden.
+- int getStd ()  
+Liefert die Stunden der Uhrzeit zurück
+- int getMin ()  
+Liefert die Minuten der Uhrzeit zurück
+- int getSek ()  
+Liefert die Sekunden der Uhrzeit zurück 
+- void setUhr (int std, int min, int sek)  
+Setzt die Uhrzeit auf die angegebenen Parameter. Falls mind. einer der Paramter 
+ungültig ist, soll eine Fehlermeldung ausgegeben werden und die original Uhrzeit 
+unverändert bleiben.
+- void naechsteSek ()  
+Zählt die Uhrzeit um 1 Sekunde hoch.
+- long getTagesSek ()  
+Liefert die Uhrzeit (seit Mitternacht) komplett in Sekunden zurück.
+- boolean wecker (Uhr weckzeit)  
+Überprüft, ob die Uhrzeit mit der Zeit von weckzeit übereinstimmt.
+
+Vereinbaren Sie ein Feld `weltzeit` für 24 verschiedene Uhren. Erzeugen Sie anschließend als eigenständige Anweisung(en) 24 verschiedene Uhren für dieses Feld und initialisieren Sie die erste Uhr im Feld mit der Uhrzeit 00:23:07 (0 Stunden 23 Minuten 7 Sekunden), die zweite Uhr mit 01:23:07, usw. bis 23:23:07.
+
+Wie sieht die Schleife aus, um im Feld `weltzeit` aus vorheriger Teilaufgabe jede der 24 Uhrzeiten um 1 Sekunde hoch zu zählen?
+
+### Aufgabe 3: (Bahn-Modellierung)
+
+Bei der Deutschen Bahn fahren verschiedene Zugtypen. Alle Zugtypen sollen über eine Lok und eine bestimmte Anzahl Wagons verfügen. Ein Wagon für Güter hat i.d.R. ein Fassungsvermögen und transportiert eine bestimmte Art an Gütern, z.B. Autos, Gefahrengut, o.ä. In einem Personenzug gibt es verschiedene Arten von Wagons: ein Bordbistro, ein Wagon für Passagiere und den Fahrradwagen. Hier hat jeder Wagon eine Anzahl Sitzplätze. In den ICEs und ICs können zusätzlich sogar Sitzplatzreservierungen durchgeführt werden.
+
+- Entscheiden Sie, welche Klassen inkl. Attribute Sie benötigen, um dieses Problem in einem Java Programm abzubilden.
+- Zeichnen Sie ein Diagramm, in welchem die Beziehungen (Vererbung, Komposition, Aggregation, Assoziation) zwischen den Klassen inkl. ihrer Attribute gezeigt werden.
+
+### Aufgabe 4: (Bahn-Implementierung)
+
+Schreiben Sie ein Java Programm, mit dem ein Benutzer selbst einen Zug (modelliert in Aufgabe 3) zusammensetzen kann. D.h. der Benutzer soll in einem Menü wiederholt auswählen, welchen Wagon er als nächstes an den Zug anhängen möchte, z. B.:
+> 1:  Lok hinzufügen  
+> 2: Passagierwagon hinzufügen  
+> 3: Fahrradwagen hinzufügen  
+> 4: Güterwagen hinzufügen  
+> 5: Bordbistro hinzufügen  
+> 6: fertig
+
+Hinweis: Sie haben sowohl bei der Modellierung (Aufgabe 3) als auch bei der Implementierung (Aufgabe 4) einen größeren Freiheitsgrad!
