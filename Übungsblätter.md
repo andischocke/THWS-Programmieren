@@ -334,3 +334,47 @@ Hinweis: Mit der Methode `toCharArray()` kann ein String in ein char[] umgewande
 String sentence = … 
 char[] chars = sentence.toCharArray();
 ```
+
+## Übungsblatt 9
+
+### Aufgabe 1: (1 Punkt) (Klassen, Objekte)
+
+Schreiben Sie eine Klasse Auto, die folgende Eigenschaften aus der Realität abbildet:
+- Marke (VW, BMW, Audi,...)
+- Hubraum
+- Farbe
+- Weitere Merkmale, die Sie als wichtig erachten.
+
+Schreiben Sie weiterhin eine Klasse, in der Sie Ihre drei Lieblingsautos anlegen, d.h., erstellen Sie drei Instanzen/Objekte der Klasse Auto und setzen Sie deren Attribute sinnvoll. Ermitteln Sie das Auto mit dem größten Hubraum von den dreien (ohne das Wissen, welches Sie aus der Erstellung der Objekte besitzen), und geben Sie die Daten dieses Autos aus!
+
+### Aufgabe 2: (1 Punkt) (Konstruktor)
+
+Ergänzen Sie in der Klasse Auto einen Konstruktor, der es erlaubt, alle Attribute direkt bei der Erstellung des Objekts mitanzugeben. Schreiben Sie eine Methode `setHubraum(int ccm)`, die es erlaubt, von einer anderen Klasse aus, den Hubraum zu setzen. Stellen Sie sowohl im Konstruktor als auch in der Methode `setHubraum(int ccm)` sicher, dass der übergebene Hubraum gültig (größer als 0) ist. Im Konstruktor soll im ungültigen Fall der Hubraum auf 1600 gesetzt werden. In der Methode `setHubraum(int ccm)` soll im ungültigen Fall der bisherige Wert nicht verändert werden.
+
+### Aufgabe 3: (1 Punkt)(Pizza)
+
+Erweitern Sie das Pizzabeispiel aus der Vorlesung, so dass eine Pizza mehrere beliebige Durchmesser/Preiskombinationen haben kann. Erstellen Sie dabei auch einen passenden Konstruktor. Schreiben Sie eine weitere Klasse, in der 5 Pizzen angelegt werden! Die Ausgabe der Speisekarte ist nicht gefordert!
+
+| Nummer | Name            | 26 cm  | 32 cm | 50 cm |
+| :---   | :---            | ---:   | ---:  | ---:  |
+| 33.    | Pizza Ananas    | 4.00   | 5.50  | 10.00 |
+| 34.    | Pizza Sucuk     | 4.00   | 5.50  | 10.00 |
+| 35.    | Pizza Spaghetti | 4.00   | 5.50  | 10.00 |
+| 46.    | Pizza Pollo     | 4.00   | 5.50  | 10.00 |
+| 47.    | Pizza Sardelle  | 4.00   | 5.00  | 10.00 |
+| 48.    | Pizza Scampi    | 5.00   | 7.00  | 12.00 |
+| 49.    | Pizza Spinaci   | 4.00   | 5.00  | 10.00 |
+| 50.    | Margherita      | 3.00   | 4.00  | 10.00 |
+| 51.    | Pizza Cipolla   | 3.50   | 4.50  | 10.00 |
+| 52.    | Pizza Schinken  | 3.50   | 4.50  | 10.00 |
+
+### Aufgabe 4: (1 Punkt) (einfacher Rechner)
+
+Schreiben Sie ein Programm, das beliebig viele Zahlen als Programmparameter übergeben bekommen kann. Zusätzlich wird als letztes Zeichen ein "+" oder "-" übergeben. Lesen Sie alle Parameter ein und führen Sie eine Addition bzw. eine Subtraktion auf alle übergebenen Zahlen aus. Bei einer Subtraktion soll von der ersten Zahl subtrahiert werden. Sie können davon ausgehen, dass immer mindestens zwei Zahlen übergeben werden und dass nur die Operatoren + und - übergeben werden.
+
+Beispiel:
+> java Parameterübergabe 1 2 3 +  
+> Ausgabe des Programms ist 6 $(= 1 + 2 + 3)$
+> 
+> java Parameterübergabe 10 2 3 –  
+> Ausgabe des Programms ist 5 $(= 10 - 2 - 3)$
