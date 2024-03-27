@@ -88,3 +88,53 @@ Fällt ein Einzelzeichen in mehrere Kategorien, sollen alle passenden Ausgaben e
 ### Aufgabe 4: (Würfelwurf) (1 Punkt)
 
 Der Befehl Math.random() gibt eine zufällige Double-Zahl zwischen 0 (inklusive) und 1 (exklusive) zurück. Für eine zurückgegebene Zahl x gilt also 𝑥 ∈ [0..1). Simulieren Sie den Wurf eines 6-seitigen Würfels. Wenn eine 1 gewürfelt wurde, soll der Text "Eins gewürfelt" ausgegeben werden, bei einer 2 "Zwei gewürfelt", etc.
+
+## Übungsblatt 4
+
+### Aufgabe 1: (Freier Fall) (1 Punkt)
+
+Die zurückgelegte Strecke eines frei fallenden Körpers berechnet sich nach folgender Formel: s(t) = (1/2)g * t², wobei g die Fallbeschleunigung (9.80665 m/s²) und t die vergangene Zeit in Sekunden darstellt. Schreiben Sie ein Programm, welches die zurückgelegte Strecke im Sekundentakt, wie im Beispiel gezeigt, ausgibt. Die Falldauer soll vom Benutzer eingegeben werden.
+
+Beispiel:  
+> Bitte Falldauer in Sekunden eingeben: 8  
+> Zeit: 1 Sekunden: Zurückgelegte Strecke: 4.903325 m  
+> Zeit: 2 Sekunden: Zurückgelegte Strecke: 19.6133 m  
+> ...  
+> Zeit: 8 Sekunden: Zurückgelegte Strecke: 313.8128 m  
+
+Modifizieren Sie das Programm, so dass nur für jede fünfte Sekunde eine Ausgabe erfolgt! Beginnen Sie bei der Ausgabe mit der ersten Sekunde, gefolgt von der sechsten Sekunde. Für die schriftliche Lösung von Teilaufgabe b) genügt es, wenn Sie lediglich den Programmcode schreiben, der sich im Vergleich zu Teilaufgabe a) ändert bzw. ergänzt wird. Bitte achten Sie dennoch darauf, dass Ihre Lösung nachvollziehbar bleibt.
+
+### Aufgabe 2: (Reihenberechnung) (1 Punkt)
+
+Gegeben sei folgende Reihe: 6 * ∑ (1/k²)
+
+Schreiben Sie die ersten fünf Glieder der Reihe auf Papier auf Ihrer schriftlichen Lösung auf! Schreiben Sie ein Programm, welches die Reihe berechnet und das Ergebnis bei jedem Schleifendurchlauf ausgibt. Brechen Sie die Berechnung ab, wenn die Änderung des Reihenwertes in einem Schleifendurchlauf kleiner als 10^(-5) ist.
+
+### Aufgabe 3: (Das kleine Einmaleins) (1 Punkt)
+
+Schreiben Sie ein Programm, welches das kleine 1x1 ausgibt. Hinweis: Beginnen Sie damit zunächst die ersten zehn Produkte mit Hilfe einer Schleife auszugeben, d.h. 1x1=1, 1x2=2, … 1x9=9, 1x10=10.
+
+Ausgabe:  
+> 1 x 1 = 1  
+> 1 x 2 = 2  
+> 1 x 3 = 3  
+> ...  
+> 2 x 1 = 2  
+> 2 x 2 = 4  
+> 2 x 3 = 6  
+> ...  
+> 10 x 8 = 80  
+> 10 x 9 = 90  
+> 10 x 10 = 100  
+
+### Aufgabe 4: (Primzahlen) (1 Punkt)
+
+Schreiben Sie ein Programm, welches für eine vom Benutzer eingegebene ganze Zahl ermittelt, ob diese eine Primzahl ist.
+
+Beispiel 1:
+> Bitte zu untersuchende Zahl eingeben: 47
+> Untersuchte Zahl ist eine Primzahl
+
+Beispiel 2:
+> Bitte zu untersuchende Zahl eingeben: 51 
+> Untersuchte Zahl ist keine Primzahl
