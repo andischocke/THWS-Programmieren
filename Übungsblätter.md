@@ -5,17 +5,15 @@ Alle Übungsblätter mit Aufgaben aus den Modulen "Programmieren 1" und "Program
 
 ### Aufgabe 1: (0 Punkte)
 
-a) Installieren Sie auf Ihrem eigenen Computer/Notebook das Java Development Kit (JDK) von Oracle. Ergänzen Sie die Umgebungsvariable PATH um das bin-Verzeichnis der JDK Installation.
-
-b) Rufen Sie ein Konsolenfenster auf, z. B. Start -> Ausführen -> cmd und testen Sie die Befehle javac und java. Wenn beide Befehle ausgeführt wurden, haben Sie das JDK richtig konfiguriert.
+- Installieren Sie auf Ihrem eigenen Computer/Notebook das Java Development Kit (JDK) von Oracle. Ergänzen Sie die Umgebungsvariable PATH um das bin-Verzeichnis der JDK Installation.
+- Rufen Sie ein Konsolenfenster auf, z. B. Start -> Ausführen -> cmd und testen Sie die Befehle javac und java. Wenn beide Befehle ausgeführt wurden, haben Sie das JDK richtig konfiguriert.
 
 ### Aufgabe 2: (2 Punkte)
 
-Erstellen Sie eine Datei Application.java, die bei Ausführung „Willkommen zu Programmieren1“ ausgibt.
+Erstellen Sie eine Datei Application.java, die bei Ausführung "Willkommen zu Programmieren 1" ausgibt.
 
-a) Übersetzen und starten Sie das Programm auf der Konsole! Dokumentieren Sie stichpunktartig die dazu notwendigen Schritte! (1 Punkt)
-
-b) Übersetzen und starten Sie das Programm mit Eclipse! Dokumentieren Sie stichpunktartig die dazu notwendigen Schritte! (1 Punkt)
+- Übersetzen und starten Sie das Programm auf der Konsole! Dokumentieren Sie stichpunktartig die dazu notwendigen Schritte! (1 Punkt)
+- Übersetzen und starten Sie das Programm mit Eclipse! Dokumentieren Sie stichpunktartig die dazu notwendigen Schritte! (1 Punkt)
 
 ### Aufgabe 3: (1 Punkt)
 
@@ -55,9 +53,7 @@ Schreiben Sie ein Programm, das – bei gegebenem Radius r eines Kreises – die
 
 ### Aufgabe 3: (1 Punkt)
 
-Zur Lösung quadratischer Gleichungen der Form x² + px + q = 0 wird die pq-Formel verwendet: 
-
-x₁,₂ = -(p/2) ± √((p/2)² - q)
+Zur Lösung quadratischer Gleichungen der Form x² + px + q = 0 wird die pq-Formel verwendet: x₁,₂ = -(p/2) ± √((p/2)² - q)
 
 Schreiben Sie ein Programm, das bei Angabe der Variablen p und q die beiden Lösungen für x ausrechnet! Recherchieren Sie mit einer Suchmaschine, mit welchem Befehl in Java eine Wurzel gezogen werden kann.
 
@@ -65,8 +61,6 @@ Schreiben Sie ein Programm, das bei Angabe der Variablen p und q die beiden Lös
 
 Schreiben Sie ein Programm, das die Variablen „stunden“, „minuten“ und „sekunden“ enthält. Initialisieren Sie die Variablen mit der aktuellen Uhrzeit.
 
-a) Berechnen Sie die Anzahl der Sekunden seit Mitternacht und geben Sie diese aus!
-
-b) Berechnen Sie die Anzahl der verbleibenden Sekunden für diesen Tag und geben Sie diese aus!
-
-c) Berechnen Sie, wie viel Prozent des Tages schon vergangen sind und geben Sie das Ergebnis aus! Die Prozentangabe soll auf mehrere Nachkommastellen genau angegeben werden.
+- Berechnen Sie die Anzahl der Sekunden seit Mitternacht und geben Sie diese aus!
+- Berechnen Sie die Anzahl der verbleibenden Sekunden für diesen Tag und geben Sie diese aus!
+- Berechnen Sie, wie viel Prozent des Tages schon vergangen sind und geben Sie das Ergebnis aus! Die Prozentangabe soll auf mehrere Nachkommastellen genau angegeben werden.
