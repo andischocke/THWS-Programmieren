@@ -152,7 +152,7 @@ Beispiel 2:
 Schreiben Sie ein Programm namens Temperaturumwandlung, das eine Temperaturtabelle auf dem Bildschirm gemäß der Formel $Grad \\ Celsius = \frac{5}{9} * (Grad \\ Fahrenheit - 32)$ ausgibt. Die Temperaturtabelle soll in der ersten Spalte Temperaturwerte in Fahrenheit (als ganze Zahl von 0 Grad Fahrenheit bis 300 Fahrenheit, jeweils inklusive) enthalten und in der zweiten Spalte die entsprechenden Temperaturwerte in Celsius (vom Typ float) auf zwei Nachkommastellen abgeschnitten oder gerundet.
 
 | Fahrenheit | Celsius |
-|       ---: |    ---: |
+| ---:       | ---:    |
 | 0          | -17.77  |
 | 1          | -17.22  |
 | 2          | -16.66  |
@@ -214,6 +214,6 @@ Schreiben Sie eine Methode, die ein Dreieck aus Sternen ausgibt. Die Methode sol
 
 Hinweis: Versuchen Sie zunächst das Dreieck in der linken Abbildung auszugeben. Passen Sie dann Ihr Programm so an, dass das Dreieck auf der rechten Seite herauskommt!
 
-| Linkes Dreieck                          | Rechtes Dreieck                         |
-| :---                                    | :----:                                  |
-| * <br> ** <br> *** <br> **** <br> ***** | * <br> ** <br> *** <br> **** <br> ***** |
+| Linkes Dreieck                                    | Rechtes Dreieck                                   |
+| :---                                              | :----:                                            |
+| * <br> * * <br> * * * <br> * * * * <br> * * * * * | * <br> * * <br> * * * <br> * * * * <br> * * * * * |
