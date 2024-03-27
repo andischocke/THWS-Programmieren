@@ -465,15 +465,15 @@ Hinweis: Sie haben sowohl bei der Modellierung (Aufgabe 3) als auch bei der Impl
 
 ## Programmieren 2
 
-## Übungsblatt 12
+### Übungsblatt 12
 
-### Aufgabe 1: (Vererbung: Generalisierung)
+#### Aufgabe 1: (Vererbung: Generalisierung)
 Schreiben Sie eine abstrakte Klasse `Person` mit der abstrakten Methode `gibTaetigkeitAus()`, die die Tätigkeit der Person auf die Konsole ausgeben soll. Leiten Sie die konkreten Klassen `Student` und `Professor` ab. Erzeugen Sie ein Feld von 100 Personen, abwechselnd Student und Professor. Rufen Sie bei allen 100 Personen die Methode `gibTaetigkeitAus()` auf. 
 
 > Bei einem Studenten soll folgende Ausgabe erfolgen: "Der Student studiert."  
 > Bei einem Professor soll folgende Ausgabe erfolgen: "Der Professor lehrt."
 
-### Aufgabe 2: (Vererbung: Generalisierung)
+#### Aufgabe 2: (Vererbung: Generalisierung)
 Schreiben Sie ein Programm, das einen Quizbogen für einen Nutzer als Text generiert. Ein Quiz soll aus zwei Arten von Quizfragen bestehen:
 - Textfragen, die ein einzelnes Wort als richtige Antwort haben. Eine Textfrage könnte wie folgt auf dem Quizbogen erscheinen:
   > Fragentext: "Was ist die Hauptstadt von Deutschland?"  
@@ -484,10 +484,10 @@ Schreiben Sie ein Programm, das einen Quizbogen für einen Nutzer als Text gener
 
 Legen Sie ein Quiz mit mehreren Text- sowie Multiple-Choice Fragen an und generieren Sie einen Quizbogen.
 
-### Aufgabe 3: (Vererbung: Spezialisierung)
+#### Aufgabe 3: (Vererbung: Spezialisierung)
 Schreiben Sie ein Programm, das die Struktur eines Unternehmens abbildet. In dem Unternehmen gibt es mehrere Abteilungen. In jeder Abteilung arbeiten mehrere Angestellte und ein Abteilungsleiter. Ein Angestellter soll einen Nachnamen, Vornamen, einen Identifikator, ein Grundgehalt, einen Gehaltsfaktor sowie ein Geburtsdatum haben. Für alle Attribute sollen Getter- und Setter zur Verfügung stehen. Der Gehaltsfaktor für einen Angestellten ist 1. Das Gehalt errechnet sich aus dem Gehaltsfaktor multipliziert mit dem Grundgehalt. Ein Abteilungsleiter soll ein Angestellter sein und ebenfalls einen Nachnamen, Vornamen, einen Identifikator, ein Grundgehalt, einen Gehaltsfaktor sowie ein Geburtsdatum haben. Der Gehaltsfaktor beträgt bei einem Abteilungsleiter 2. Ferner soll ein Abteilungsleiter eine Methode `befördern` haben, in der ein Angestellter befördert werden kann. Dieser Angestellte soll dann seinen Gehaltsfaktor um 10% erhöht bekommen. Schreiben Sie eine geeignete main-Methode, um Ihr Programm zu testen.
 
-### Aufgabe 4: (Vererbung: Spezialisierung)
+#### Aufgabe 4: (Vererbung: Spezialisierung)
 Verwenden Sie die vorgegebenen Klassen `SimpleChangeCalculator` und `Coin`. 
 ```java
 /**
@@ -542,7 +542,8 @@ public class SimpleChangeCalculator {
         System.out.println("Anzahl der Münzen: " + j);
     }
 }
-
+```
+```java
 /**
  * Coin ist eine Hilfsklasse, die die vorhandenen Münztypen repraesentiert.
  * Dazu stellt sie ein oeffentliches Array zur Verfuegung, in dem nacheinander alle Typen enthalten sind.
@@ -594,10 +595,10 @@ An einer anderen Fakultät häufen sich Beschwerden, dass der Eis-Automat in der
 
 Ihre Aufgabe: Implementieren Sie einen eigenen `ChangeCalculator` und überschreiben Sie die Methode `getChange` mit einer verbesserten Logik für die Stückelung der Geldrückgabe. Dabei soll jeweils ein int-Array mit der minimalen Anzahl an Münzen zurückgegeben werden, die den geforderten Betrag ergeben.
 
-## Übungsblatt 13
+### Übungsblatt 13
 
-### Aufgabe 1: (Wiederholung Schleifen, mehrdimensionale Arrays)
-Verwenden Sie die vorgegebenen Klassen.
+#### Aufgabe 1: (Wiederholung Schleifen, mehrdimensionale Arrays)
+Verwenden Sie die vorgegebenen Klassen `AbstractFigur`, `Brett`, `Dame`, `Feld`, `Figur`, `Laeufer`, `LaeuferImpl`, `Turm` und `TurmImpl`.
 ```java
 public abstract class AbstractFigur implements Figur {
     int x;
@@ -626,7 +627,8 @@ public abstract class AbstractFigur implements Figur {
             this.y = y;
     }
 }
-
+```
+```java
 public class Brett {
     boolean[][] brett = new boolean[8][8];
 
@@ -642,7 +644,8 @@ public class Brett {
         return brett[x - 1][y - 1];
     }
 }
-
+```
+```java
 public class Dame extends AbstractFigur implements Laeufer, Turm {
     Laeufer laeufer;
     Turm turm;
@@ -676,7 +679,8 @@ public class Dame extends AbstractFigur implements Laeufer, Turm {
         }
     }
 }
-
+```
+```java
 public class Feld {
     int x;
     int y;
@@ -702,13 +706,16 @@ public class Feld {
         this.y = y;
     }
 }
-
+```
+```java
 public interface Figur {
     public Brett gibErlaubteFelder();
 }
-
+```
+```java
 public interface Laeufer extends Figur {}
-
+```
+```java
 public class LaeuferImpl extends AbstractFigur implements Laeufer {
     public LaeuferImpl(int x, int y) {
         super(x, y);
@@ -734,9 +741,11 @@ public class LaeuferImpl extends AbstractFigur implements Laeufer {
         }
     }
 }
-
+```
+```java
 public interface Turm extends Figur {}
-
+```
+```java
 public class TurmImpl extends AbstractFigur implements Turm {
     public TurmImpl(int x, int y) {
         super(x, y);
@@ -769,8 +778,8 @@ public class TurmImpl extends AbstractFigur implements Turm {
 - Ergänzen Sie in der Klasse `LaeuferImpl` den Algorithmus zur Festlegung der erlaubten Felder.
 - Ergänzen Sie die Klasse `Brett` um eine Methode `kombiniere`. Die Methode soll ein Brett entgegennehmen und das aktuelle Brett mit dem übergebenen Brett zu einem neuen Brett verbinden und dieses zurückgeben. Auf dem neuen Brett sollen alle Felder markiert sein, die auf einem der beiden oder beiden Brettern markiert waren.
 
-### Aufgabe 2: (Vererbung für Code-Wiederverwendung, Object als Oberklasse)
-Verwenden Sie die vorgegebenen Klassen.
+#### Aufgabe 2: (Vererbung für Code-Wiederverwendung, Object als Oberklasse)
+Verwenden Sie die vorgegebenen Klassen `Stack`.
 ```java
 @SuppressWarnings("all") // Unterdrückt alle Warnings
 public class Stack extends ArrayList {}
@@ -786,10 +795,10 @@ Implementieren Sie eine Klasse `Stack`. Die Klasse `Stack` soll von der Klasse `
 
 Welche Nachteile hat die Verwendung der Vererbung in dieser Aufgabe?
 
-### Aufgabe 3: (Komposition für Code-Wiederverwendung, Interfaces, Abstrakte Klasse)
+#### Aufgabe 3: (Komposition für Code-Wiederverwendung, Interfaces, Abstrakte Klasse)
 Implementieren Sie den Stack aus Aufgabe 2 so, dass er nicht von `ArrayList` erbt, sondern `ArrayList` als Attribut verwendet wird! Für die Klasse Stack sind also verschiedene Implementierungen denkbar. Definieren Sie ein sinnvolles Interface `Stack` und lassen Sie Ihre Klasse das Interface `Stack` implementieren. Ist es sinnvoll, eine abstrakte Klasse `AbstractStack` zu implementieren, die bestimmte Teile der Implementierung für mögliche weitere Implementierungen vorgibt? 
 
-### Aufgabe 4: (Mehrfachvererbung, Interfaces, Komposition)
+#### Aufgabe 4: (Mehrfachvererbung, Interfaces, Komposition)
 Ein Mensch lässt sich modellieren, indem seine üblichen Tätigkeiten abgebildet werden. Darunter fallen essen, schlafen, arbeiten und Autofahren. Ein Roboter mit einer künstlichen Intelligenz hat einen ähnlichen Satz Tätigkeiten: aufladen, warten, arbeiten und neuerdings – durch den Trend zu selbst fahrenden Autos – auch Autofahren. Sowohl Mensch als auch Roboter sollen eine Methode `entscheide()` haben, in der sie auf eine gegebene Gefahrensituation reagieren. Die Situation soll ein enum mit drei Werten sein: `GEFAHR_LINKS`, `GEFAHR_RECHTS`, `GEFAHR_VORNE`. 
 
 Der Mensch schätzt die Situation allerdings in 25% der Fälle nicht genau ein und ist `UNENTSCHIEDEN`. Die Entscheidungen sollen auch durch ein enum mit den Werten: `RECHTS`, `LINKS`, `BREMSEN`, `UNENTSCHIEDEN` abgebildet werden.
