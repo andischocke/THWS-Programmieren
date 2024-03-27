@@ -577,7 +577,6 @@ public class Coin {
         new Coin("2-Euro", 200),
     };
 }
-
 ```
 An einer anderen Fakultät häufen sich Beschwerden, dass der Eis-Automat in der Cafeteria zwar den richtigen Betrag Wechselgeld zurückgebe, dieser aber oft aus übermäßig vielen kleinen Münzen bestehe. Die Kollegen wenden sich jetzt an uns von der Fakultät Informatik/Wirtschaftsinformatik, da der Hersteller des Eis-Automaten auf Nachfrage folgende Auskunft gegeben hat: 
 
@@ -594,3 +593,205 @@ An einer anderen Fakultät häufen sich Beschwerden, dass der Eis-Automat in der
 > Wir sichern Ihnen zu, dass der Rückgabebetrag richtig ist. Für die Stückelung der Münzen haben wir auf einen einfachen und bewährten Algorithmus zurückgegriffen. Wenn Sie eine veränderte Stückelungslogik realisieren möchten, haben wir dies bereits für Sie vorbereitet: Sie können in einer eigenen Klasse die Methode `getChange()` überschreiben. Natürlich muss weiterhin sichergestellt sein, dass der richtige Betrag zurückgegeben wird. Allerdings können Sie selbst bestimmen, welche Münzen genau zurückgegeben werden. Sie können sich vorstellen, dass diese Auskunft bei der anderen Fakultät erst einmal große Verwirrung gestiftet hat. 
 
 Ihre Aufgabe: Implementieren Sie einen eigenen `ChangeCalculator` und überschreiben Sie die Methode `getChange` mit einer verbesserten Logik für die Stückelung der Geldrückgabe. Dabei soll jeweils ein int-Array mit der minimalen Anzahl an Münzen zurückgegeben werden, die den geforderten Betrag ergeben.
+
+## Übungsblatt 13
+
+### Aufgabe 1: (Wiederholung Schleifen, mehrdimensionale Arrays)
+Verwenden Sie die vorgegebenen Klassen.
+```java
+public abstract class AbstractFigur implements Figur {
+    int x;
+    int y;
+
+    public AbstractFigur(int x, int y) {
+        setX(x);
+        setY(y);
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public final void setX(int x) {
+        if (x >= 1 && x <= 8)
+            this.x = x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public void setY(int y) {
+        if (y >= 1 && y <= 8)
+            this.y = y;
+    }
+}
+
+public class Brett {
+    boolean[][] brett = new boolean[8][8];
+
+    public Brett() {
+
+    }
+
+    public void markiereFeld(int x, int y) {
+        brett[x - 1][y - 1] = true;
+    }
+
+    public boolean gibFeld(int x, int y) {
+        return brett[x - 1][y - 1];
+    }
+}
+
+public class Dame extends AbstractFigur implements Laeufer, Turm {
+    Laeufer laeufer;
+    Turm turm;
+
+    public Dame(int x, int y) {
+        super(x, y);
+        laeufer = new LaeuferImpl(x, y);
+        turm = new TurmImpl(x, y);
+    }
+
+    @Override
+    public Brett gibErlaubteFelder() {
+        Brett brettLaeufer = laeufer.gibErlaubteFelder();
+        Brett brettTurm = turm.gibErlaubteFelder();
+        Brett kombiniertesBrett = brettTurm.kombiniere(brettLaeufer);
+        return kombiniertesBrett;
+    }
+
+    public static void main(String[] args) {
+        Dame d = new Dame(4, 5);
+        System.out.println(d.gibErlaubteFelder());
+        Brett brett = d.gibErlaubteFelder();
+        for (int j = 1; j <= 8; j++) {
+            for (int i = 1; i <= 8; i++) {
+                if (brett.gibFeld(i, j))
+                    System.out.print("x");
+                else
+                    System.out.print("o");
+            }
+            System.out.println();
+        }
+    }
+}
+
+public class Feld {
+    int x;
+    int y;
+
+    public Feld(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
+}
+
+public interface Figur {
+    public Brett gibErlaubteFelder();
+}
+
+public interface Laeufer extends Figur {}
+
+public class LaeuferImpl extends AbstractFigur implements Laeufer {
+    public LaeuferImpl(int x, int y) {
+        super(x, y);
+    }
+
+    public Brett gibErlaubteFelder() {
+        Brett brett = new Brett();
+        //TODO: Ergänzen Sie den Algorithmus zur Bestimmung der Felder
+        return brett;
+    }
+
+    public static void main(String[] args) {
+        LaeuferImpl l = new LaeuferImpl(4, 5);
+        Brett brett = l.gibErlaubteFelder();
+        for (int j = 1; j <= 8; j++) {
+            for (int i = 1; i <= 8; i++) {
+                if (brett.gibFeld(i, j))
+                    System.out.print("x");
+                else
+                    System.out.print("o");
+            }
+            System.out.println();
+        }
+    }
+}
+
+public interface Turm extends Figur {}
+
+public class TurmImpl extends AbstractFigur implements Turm {
+    public TurmImpl(int x, int y) {
+        super(x, y);
+    }
+
+    public Brett gibErlaubteFelder() {
+        Brett brett = new Brett();
+        for (int i = 1; i <= 8; i++) {
+            brett.markiereFeld(i, y);
+            brett.markiereFeld(x, i);
+        }
+        return brett;
+    }
+
+    public static void main(String[] args) {
+        TurmImpl turm = new TurmImpl(4, 5);
+        Brett brett = turm.gibErlaubteFelder();
+        for (int j = 1; j <= 8; j++) {
+            for (int i = 1; i <= 8; i++) {
+                if (brett.gibFeld(i, j))
+                    System.out.print("x");
+                else
+                    System.out.print("o");
+            }
+            System.out.println();
+        }
+    }
+}
+```
+- Ergänzen Sie in der Klasse `LaeuferImpl` den Algorithmus zur Festlegung der erlaubten Felder.
+- Ergänzen Sie die Klasse `Brett` um eine Methode `kombiniere`. Die Methode soll ein Brett entgegennehmen und das aktuelle Brett mit dem übergebenen Brett zu einem neuen Brett verbinden und dieses zurückgeben. Auf dem neuen Brett sollen alle Felder markiert sein, die auf einem der beiden oder beiden Brettern markiert waren.
+
+### Aufgabe 2: (Vererbung für Code-Wiederverwendung, Object als Oberklasse)
+Verwenden Sie die vorgegebenen Klassen.
+```java
+@SuppressWarnings("all") // Unterdrückt alle Warnings
+public class Stack extends ArrayList {}
+```
+Ein Stack ist eine Datenstruktur, die zwei Primitive zur Verfügung stellt:
+- `push`: legt ein Element oben auf den Stack
+- `pop`: nimmt ein Element von oben vom Stack
+
+Implementieren Sie eine Klasse `Stack`. Die Klasse `Stack` soll von der Klasse `ArrayList` erben und mit Hilfe der Methoden von `ArrayList`, die Methoden `pop` und `push` umsetzen. Auf den Stack sollen beliebige Objekte gelegt werden können. Die Klasse ArrayList stellt folgende Methoden zur Verfügung:
+- `add`: Appends the specified element to the end of this list.
+- `remove`: Removes the element at the specified position in this list. Shifts any subsequent elements to the left (subtracts one from their indices).
+- `size`: Returns the number of elements in this list.
+
+Welche Nachteile hat die Verwendung der Vererbung in dieser Aufgabe?
+
+### Aufgabe 3: (Komposition für Code-Wiederverwendung, Interfaces, Abstrakte Klasse)
+Implementieren Sie den Stack aus Aufgabe 2 so, dass er nicht von `ArrayList` erbt, sondern `ArrayList` als Attribut verwendet wird! Für die Klasse Stack sind also verschiedene Implementierungen denkbar. Definieren Sie ein sinnvolles Interface `Stack` und lassen Sie Ihre Klasse das Interface `Stack` implementieren. Ist es sinnvoll, eine abstrakte Klasse `AbstractStack` zu implementieren, die bestimmte Teile der Implementierung für mögliche weitere Implementierungen vorgibt? 
+
+### Aufgabe 4: (Mehrfachvererbung, Interfaces, Komposition)
+Ein Mensch lässt sich modellieren, indem seine üblichen Tätigkeiten abgebildet werden. Darunter fallen essen, schlafen, arbeiten und Autofahren. Ein Roboter mit einer künstlichen Intelligenz hat einen ähnlichen Satz Tätigkeiten: aufladen, warten, arbeiten und neuerdings – durch den Trend zu selbst fahrenden Autos – auch Autofahren. Sowohl Mensch als auch Roboter sollen eine Methode `entscheide()` haben, in der sie auf eine gegebene Gefahrensituation reagieren. Die Situation soll ein enum mit drei Werten sein: `GEFAHR_LINKS`, `GEFAHR_RECHTS`, `GEFAHR_VORNE`. 
+
+Der Mensch schätzt die Situation allerdings in 25% der Fälle nicht genau ein und ist `UNENTSCHIEDEN`. Die Entscheidungen sollen auch durch ein enum mit den Werten: `RECHTS`, `LINKS`, `BREMSEN`, `UNENTSCHIEDEN` abgebildet werden.
+
+Ein Cyborg ist sowohl ein Mensch als auch ein Roboter. Trotz des Stresses den das Aufladen, Essen, Warten, Schlafen, etc. mit sich bringt, fährt auch ein Cyborg gerne Auto und wird dort Gefahrensituationen ausgesetzt. Wenn sich der Menschanteil und der Roboteranteil in ihrer Entscheidung einig sind, trifft der Cyborg die gleiche Entscheidung. Wenn der Menschanteil und der Roboteranteil unterschiedlicher Ansicht sind, dann trifft der Cyborg zufällig eine der beiden Entscheidungen.
