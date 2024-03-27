@@ -64,3 +64,27 @@ Schreiben Sie ein Programm, das die Variablen „stunden“, „minuten“ und �
 - Berechnen Sie die Anzahl der Sekunden seit Mitternacht und geben Sie diese aus!
 - Berechnen Sie die Anzahl der verbleibenden Sekunden für diesen Tag und geben Sie diese aus!
 - Berechnen Sie, wie viel Prozent des Tages schon vergangen sind und geben Sie das Ergebnis aus! Die Prozentangabe soll auf mehrere Nachkommastellen genau angegeben werden.
+
+## Übungsblatt 3
+
+### Aufgabe 1: (Modulo) (1 Punkt)
+
+Schreiben Sie ein Programm, welches vom Benutzer eine ganze Zahl einliest und mithilfe des Modulo-Operators überprüft, ob die Zahl durch 7 teilbar ist. Anschließend soll eine entsprechende Ausgabe auf der Standardausgabe erfolgen. Was passiert, wenn der Modulo Operator auf negative Zahlen angewendet wird? Schreiben Sie die zugehörige Vorzeichentabelle auf.
+
+### Aufgabe 2: (Pizzarechner) (1 Punkt)
+
+Auf einer Pizzakarte werden Pizzen oft in unterschiedlichen Durchmessern (26cm, 28cm, 30cm) zu unterschiedlichen Preisen angeboten. Schreiben Sie ein Programm, das von zwei Pizzen jeweils den Durchmesser und den Preis einliest. Das Programm soll die Fläche der Pizza ausrechnen und daraufhin ausgeben, welche Pizza das bessere Größen-/Preisverhältnis hat. Vorgehensweise: Belegen Sie zunächst die Variablen mit festen Werten und implementieren Sie die Berechnung und die Ausgabe. Wenn alles soweit läuft, fügen Sie das Einlesen der Werte hinzu. So müssen Sie nicht bei jedem Testlauf erneut die Werte eingeben.
+
+### Aufgabe 3: (Einzelzeichen) (1 Punkt)
+
+Schreiben Sie ein Programm, das ein Einzelzeichen einliest. Ist das Einzelzeichen 
+- ein Großbuchstabe, soll das Wort "Großbuchstabe" ausgegeben werden.
+- eine hexadezimale Ziffer (d.h. '0' – '9', 'a' – 'f'  oder  'A' – 'F'), dann soll „Hexadezimale Ziffer“ ausgegeben werden.
+- eine binäre Ziffer, dann soll "binäre Ziffer" ausgegeben werden.
+- eine Ziffer im Oktalsystem, dann soll "oktale Ziffer" ausgegeben werden.
+
+Fällt ein Einzelzeichen in mehrere Kategorien, sollen alle passenden Ausgaben erscheinen. Fällt ein Einzelzeichen in keine der Kategorien, soll die Ausgabe „Unbekannt“ erfolgen.
+
+### Aufgabe 4: (Würfelwurf) (1 Punkt)
+
+Der Befehl Math.random() gibt eine zufällige Double-Zahl zwischen 0 (inklusive) und 1 (exklusive) zurück. Für eine zurückgegebene Zahl x gilt also 𝑥 ∈ [0..1). Simulieren Sie den Wurf eines 6-seitigen Würfels. Wenn eine 1 gewürfelt wurde, soll der Text "Eins gewürfelt" ausgegeben werden, bei einer 2 "Zwei gewürfelt", etc.
