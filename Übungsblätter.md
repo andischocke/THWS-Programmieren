@@ -217,3 +217,68 @@ Hinweis: Versuchen Sie zunächst das Dreieck in der linken Abbildung auszugeben.
 | Linkes Dreieck                                    | Rechtes Dreieck                                   |
 | :---                                              | :----:                                            |
 | * <br> * * <br> * * * <br> * * * * <br> * * * * * | * <br> * * <br> * * * <br> * * * * <br> * * * * * |
+
+## Übungsblatt 7
+
+### Aufgabe 1: (Rekursion) (1 Punkt)
+
+Schreiben Sie eine Methode, die $x^n$ rekursiv berechnet! Testen Sie ihre Methode, indem vom Anwender die Basis und der Exponent erfragt und eingegeben werden. Anschließend wird die Methode aufgerufen und das Ergebnis auf der Standardausgabe angezeigt.
+
+Hinweis: Machen Sie sich hierbei die mathematische Definition der Potenz zunutze: $x^0 = 1$, $x^{n+1} = x^n * x$, wobei $x \in \mathbb{R}, n \in \mathbb{N}$.
+
+### Aufgabe 2: (Sinusberechnung) (1 Punkt)
+
+Schreiben Sie eine Methode, die den Sinus berechnet. Der Sinus kann durch folgende Reihe berechnet werden:
+```math
+\sin(x) = \sum_{k=0}^{\infty} (-1)^k \frac{x^{2k+1}}{(2k + 1)!}
+```
+
+Schreiben Sie zunächst die ersten fünf Glieder der Summe auf! Testen Sie ihre Methode, indem vom Anwender der Wert x abgefragt und eingegeben wird. Anschließend wird die Methode aufgerufen und das Ergebnis auf der Standardausgabe angezeigt.
+
+Hinweis: Gehen Sie analog zu der Berechnung des Cosinus im Vorlesungsskript vor.
+
+### Erklärung zu den Aufgaben 3 und 4:
+
+In der Statistik gibt es wichtige Größen zur Beurteilung von Messreihen. Die beiden vielleicht bedeutendsten Größen sind der Mittelwert (arithmetisches Mittel) und die Standardabweichung.
+
+Das arithmetische Mittel $\bar{x}$ wird durch folgende Formel bestimmt:
+```math
+\bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i
+```
+
+Beispiel: Der Notenspiegel von 15 Schülern sieht wie folgt aus:
+
+| Note   | 1      | 2      | 3      | 4      | 5      |
+| :---   | :----: | :----: | :----: | :----: | :----: |
+| Anzahl | 2      | 3      | 5      | 2      | 3      |
+
+Das arithmetische Mittel (d.h. die Durchschnittsnote) berechnet sich wie folgt: $\frac{2 * 1 + 3 * 2 + 5 * 3 + 2 * 4 + 3 * 5}{15} \approx 3.07$
+
+Die Standardabweichung $s'$ ist ein Maß für die Streuung um den Mittelwert und berechnet sich wie folgt:
+```math
+s' = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (x_i - \bar{x})^2}
+```
+
+Ein Testszenario für die Aufgaben könnte wie folgt aussehen: Sie spielen Golf und üben den ersten Abschlag. Nach 10 Abschlägen messen Sie, wie nah die Bälle am Loch liegen und bekommen folgendes Ergebnis: 12m, 15m, 22m, 25m, 50m, 57m, 60m, 75m, 80m, 114m.
+
+### Aufgabe 3: (Arithmetisches Mittel, Maximum, Minimum) (1 Punkt)
+
+Schreiben Sie ein Programm, das eine Messreihe (d. h. eine beliebige Anzahl von Fließkommazahlen) einliest, die vom Anwender eingegeben werden. Die Anzahl ist zu Beginn vom Benutzer einzugeben und muss größer als 0 sein. Ansonsten terminiert das Programm mit einer Fehlermeldung. Ausgegeben werden soll am Ende das arithmetische Mittel der eingegebenen Zahlen, sowie der kleinste (Minimum) und der größte (Maximum) Wert.
+
+Beispiel:
+> Anzahl der einzulesenden Werte: 5
+> 1. Wert:  3,14
+> 2. Wert:  2,67
+> 3. Wert:  6,71
+> 4. Wert:  1,45
+> 5. Wert:  5,23
+> 
+> Kleinster Wert: 1.45  
+> Groesster Wert: 6.71  
+> Arithmetischer Mittelwert: 3.84
+
+Testen Sie ihr Programm mit den Werten aus obigem Szenario.
+
+### Aufgabe 4: (Standardabweichung) (1 Punkt)
+
+Ergänzen Sie Ihr Programm aus Aufgabe 3 um die Berechnung der Standardabweichung.
