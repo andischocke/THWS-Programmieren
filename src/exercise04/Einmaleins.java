@@ -1,3 +1,5 @@
+package exercise04;
+
 public class Einmaleins
 {
     public static void main(String[] args)

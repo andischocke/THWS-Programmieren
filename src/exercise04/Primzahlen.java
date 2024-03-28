@@ -1,3 +1,5 @@
+package exercise04;
+
 import java.util.Scanner;
 
 public class Primzahlen

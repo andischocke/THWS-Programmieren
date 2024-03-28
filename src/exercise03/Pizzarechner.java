@@ -1,3 +1,5 @@
+package exercise03;
+
 public class Pizzarechner {
     public static void main(String[] args) {
         Pizza pizza1 = new Pizza(26, 11);

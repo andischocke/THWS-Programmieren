@@ -1,3 +1,5 @@
+package exercise02;
+
 public class Tausch
 {
     public static void main(String[] args)

@@ -1,3 +1,5 @@
+package exercise03;
+
 import java.util.Scanner;
 
 public class Einzelzeichen {

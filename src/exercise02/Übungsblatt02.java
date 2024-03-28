@@ -1,3 +1,5 @@
+package exercise02;
+
 import java.time.LocalTime;
 
 public class Übungsblatt02
