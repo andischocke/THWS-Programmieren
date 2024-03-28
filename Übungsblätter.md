@@ -66,17 +66,14 @@ public class Tausch {
 }
 ```
 
-#### Aufgabe 2: (1 Punkt)
+#### Aufgabe 2:
 Schreiben Sie ein Programm, das – bei gegebenem Radius r eines Kreises – die Kreisfläche $(πr^2)$ und den Kreisumfang $(2πr)$ berechnet und auf der Standardausgabe mit Hinweistext ausgibt. Wie groß wäre das Volumen, falls es sich statt eines Kreises um eine Kugel $(\frac{4}{3}πr^3)$ handelt? Berechnen Sie das Volumen und geben Sie es aus! Sie können die Kreis- und die Kugelberechnungen im gleichen Programm stattfinden lassen.
 
-#### Aufgabe 3: (1 Punkt)
+#### Aufgabe 3:
 Zur Lösung quadratischer Gleichungen der Form $x^2 + px + q = 0$ wird die pq-Formel $x_{1,2} = - \frac{p}{2} \pm \sqrt{\left( \frac{p}{2} \right)^2 - q}$ verwendet. Schreiben Sie ein Programm, das bei Angabe der Variablen p und q die beiden Lösungen für x ausrechnet! Recherchieren Sie mit einer Suchmaschine, mit welchem Befehl in Java eine Wurzel gezogen werden kann.
 
-#### Aufgabe 4: (1 Punkt)
-Schreiben Sie ein Programm, das die Variablen `stunden`, `minuten` und `sekunden` enthält. Initialisieren Sie die Variablen mit der aktuellen Uhrzeit.
-- Berechnen Sie die Anzahl der Sekunden seit Mitternacht und geben Sie diese aus!
-- Berechnen Sie die Anzahl der verbleibenden Sekunden für diesen Tag und geben Sie diese aus!
-- Berechnen Sie, wie viel Prozent des Tages schon vergangen sind und geben Sie das Ergebnis aus! Die Prozentangabe soll auf mehrere Nachkommastellen genau angegeben werden.
+#### Aufgabe 4:
+Schreiben Sie ein Programm, das die Variablen `stunden`, `minuten` und `sekunden` enthält. Initialisieren Sie die Variablen mit der aktuellen Uhrzeit. Berechnen Sie die Anzahl der Sekunden seit Mitternacht und geben Sie diese aus! Berechnen Sie die Anzahl der verbleibenden Sekunden für diesen Tag und geben Sie diese aus! Berechnen Sie, wie viel Prozent des Tages schon vergangen sind und geben Sie das Ergebnis aus! Die Prozentangabe soll auf mehrere Nachkommastellen genau angegeben werden.
 
 ### Übungsblatt 3
 #### Aufgabe 1: (Modulo) (1 Punkt)
