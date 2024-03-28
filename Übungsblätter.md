@@ -95,9 +95,8 @@ Fällt ein Einzelzeichen in mehrere Kategorien, sollen alle passenden Ausgaben e
 Der Befehl `Math.random()` gibt eine zufällige Double-Zahl zwischen 0 (inklusive) und 1 (exklusive) zurück. Für eine zurückgegebene Zahl x gilt also 𝑥 ∈ [0..1). Simulieren Sie den Wurf eines 6-seitigen Würfels mit dem Programm `Dice`. Wenn eine 1 gewürfelt wurde, soll der Text "Eins gewürfelt" ausgegeben werden, bei einer 2 "Zwei gewürfelt", etc.
 
 ### Übungsblatt 4
-#### Aufgabe 1: (Freier Fall) (1 Punkt)
-- Die zurückgelegte Strecke eines frei fallenden Körpers berechnet sich nach folgender Formel: $s(t) = \frac{1}{2} g * t^2$, wobei g die Fallbeschleunigung $(9.80665 \frac{m}{s^2})$ und t die vergangene Zeit in Sekunden darstellt. Schreiben Sie ein Programm, welches die zurückgelegte Strecke im Sekundentakt, wie im Beispiel gezeigt, ausgibt. Die Falldauer soll vom Benutzer eingegeben werden.
-- Modifizieren Sie das Programm, so dass nur für jede fünfte Sekunde eine Ausgabe erfolgt! Beginnen Sie bei der Ausgabe mit der ersten Sekunde, gefolgt von der sechsten Sekunde.
+#### Aufgabe 1:
+Die zurückgelegte Strecke eines frei fallenden Körpers berechnet sich nach folgender Formel: $s(t) = \frac{1}{2} g * t^2$, wobei g die Fallbeschleunigung $(9.80665 \frac{m}{s^2})$ und t die vergangene Zeit in Sekunden darstellt. Schreiben Sie ein Programm `Freier Fall`, welches die zurückgelegte Strecke im Sekundentakt, wie im Beispiel gezeigt, ausgibt. Die Falldauer soll vom Benutzer eingegeben werden. Modifizieren Sie das Programm, so dass nur für jede fünfte Sekunde eine Ausgabe erfolgt! Beginnen Sie bei der Ausgabe mit der ersten Sekunde, gefolgt von der sechsten Sekunde.
 
 Beispiel:  
 > Bitte Falldauer in Sekunden eingeben: 8  
@@ -106,14 +105,14 @@ Beispiel:
 > ...  
 > Zeit: 8 Sekunden: Zurückgelegte Strecke: 313.8128 m  
 
-#### Aufgabe 2: (Reihenberechnung) (1 Punkt)
-Gegeben ist eine Reihe. Schreiben Sie die ersten fünf Glieder der Reihe auf Papier auf Ihrer schriftlichen Lösung auf! Schreiben Sie ein Programm, welches die Reihe berechnet und das Ergebnis bei jedem Schleifendurchlauf ausgibt. Brechen Sie die Berechnung ab, wenn die Änderung des Reihenwertes in einem Schleifendurchlauf kleiner als $10^{-5}$ ist.
+#### Aufgabe 2:
+Gegeben ist eine Reihe. Schreiben Sie ein Programm `Reihenberechnung`, welches die Reihe berechnet und das Ergebnis bei jedem Schleifendurchlauf ausgibt. Brechen Sie die Berechnung ab, wenn die Änderung des Reihenwertes in einem Schleifendurchlauf kleiner als $10^{-5}$ ist.
 ```math
 6 * \sum_{k=1}^\infty \frac{1}{k^2}
 ```
 
-#### Aufgabe 3: (Das kleine Einmaleins) (1 Punkt)
-Schreiben Sie ein Programm, welches das kleine 1x1 ausgibt. Hinweis: Beginnen Sie damit zunächst die ersten zehn Produkte mit Hilfe einer Schleife auszugeben, d.h. 1x1=1, 1x2=2, … 1x9=9, 1x10=10.
+#### Aufgabe 3:
+Schreiben Sie ein Programm `Einmaleins`, welches das kleine 1x1 ausgibt. Hinweis: Beginnen Sie damit zunächst die ersten zehn Produkte mit Hilfe einer Schleife auszugeben, d.h. 1x1=1, 1x2=2, … 1x9=9, 1x10=10.
 
 Ausgabe:  
 > 1 x 1 = 1  
@@ -128,8 +127,8 @@ Ausgabe:
 > 10 x 9 = 90  
 > 10 x 10 = 100  
 
-#### Aufgabe 4: (Primzahlen) (1 Punkt)
-Schreiben Sie ein Programm, welches für eine vom Benutzer eingegebene ganze Zahl ermittelt, ob diese eine Primzahl ist.
+#### Aufgabe 4:
+Schreiben Sie ein Programm `Primzahlen`, welches für eine vom Benutzer eingegebene ganze Zahl ermittelt, ob diese eine Primzahl ist.
 
 Beispiel 1:
 > Bitte zu untersuchende Zahl eingeben: 47  
