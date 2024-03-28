@@ -1,5 +1,5 @@
 # Übungsblätter
-Alle Übungsblätter mit Aufgaben aus den Modulen "Programmieren 1" und "Programmieren 1", die an der Technischen Hochschule Würzburg-Schweinfurt angeboten werden.
+Alle Übungsblätter mit Aufgaben aus den Modulen "Programmieren 1" und "Programmieren 2", die an der Technischen Hochschule Würzburg-Schweinfurt angeboten werden.
 
 | [Programmieren 1](#programmieren-1) | [Programmieren 2](#programmieren-2) |
 | :---                                | :---                                |
