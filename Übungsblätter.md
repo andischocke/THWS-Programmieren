@@ -44,7 +44,7 @@ Erstellen Sie eine Datei HelloWorld.java, die bei Ausführung "Hello World!" aus
 Erweitern Sie das Programm, sodass es den Term $3 * (9 + 3) + 4 * 8$ korrekt berechnet und das Ergebnis ausgibt.
 
 ### Übungsblatt 2
-#### Aufgabe 1: (1 Punkt) 
+#### Aufgabe 1:
 Gegeben ist das Programm `Tausch`. Tauschen Sie die Inhalte der beiden Variablen, das heißt wenn vor dem Tausch x den Wert 5 hatte und y den Wert 7, dann soll x nach dem Tausch den Wert 7 haben und y den Wert 5. Führen Sie den Tausch so durch, dass der Tausch funktioniert, egal mit welchem Wert x und y initialisiert werden.
 ```java
 public class Tausch {
@@ -57,9 +57,7 @@ public class Tausch {
         System.out.println(y);
 
         // Tausch
-        int temp = x;
-        x = y;
-        y = temp;
+        // ...
 
         // Nach dem Tausch
         System.out.println(x);
