@@ -1032,3 +1032,41 @@ Implementieren Sie mit Hilfe der Collection‐Klassen eine MultiMap, mit der es 
 - to expand ‐> vergrößern, wachsen 
 
 Es genügt, wenn Sie eine sinnvolle put und get Methode implementieren. Mit welcher Kombination von Collection‐Klassen lässt sich eine solche MultiMap umsetzen? 
+
+### Übungsblatt 19 
+#### Aufgabe 1: (Builder) 
+Entwerfen Sie eine Klasse Nährstoffangaben mit den verpflichtenden Feldern `portionsgroesse` und `anzahlPortionen` sowie den optionalen Feldern `Eiweiß`, `Fett`, `Kohlenhydrate` und `Natrium` mit Hilfe des Builder Patterns. 
+
+#### Aufgabe 2: (Geschachtelte Klassen, Generics) 
+Ein Binärbaum hat ein Wurzelelement (root). An jedem Element können wiederum zwei Elemente hängen (siehe Abbildung). Erstellen Sie eine generische Klasse Binärbaum und eine generische Klasse Element. Schachteln Sie die Klasse Element in den Binärbaum. Sie sollen Elemente in den Baum hinzufügen können sowie eine Ausgabe des Baum ermöglichen. 
+```mermaid
+flowchart TD
+    root((root)) --> Cool
+
+    Cool --> Aaronson
+    Cool --> Zylla
+
+    Aaronson --> AaronsonLeft((null))
+    Aaronson --> AaronsonRight((null))
+
+    Zylla --> Garrett
+    Zylla --> ZyllaRight((null))
+
+    Garrett --> GarrettLeft((null))
+    Garrett --> GarrettRight((null))
+```
+
+#### Aufgabe 3: (JUnit Tests) 
+Schreiben Sie eine sinnvolle Menge Unit Tests für die Baumimplementierung aus Aufgabe 2. 
+
+#### Aufgabe 4: (Fluent Interface, Maven) 
+Erstellen Sie ein Eclipse-Projekt und legen Sie Jersey Client Bibliothek auf Ihren Klassenpfad. Sie können die Jersey-Libraries auch alternativ über Maven einbinden, indem Sie folgenden Eintrag in der pom.xml ergänzen: 
+```xml
+<dependency> 
+    <groupId>org.glassfish.jersey.core</groupId> 
+    <artifactId>jersey-client</artifactId> 
+    <version>2.23.2</version> 
+</dependency> 
+```
+- Nehmen Sie das Beispiel zum Webseitenabruf von Wikipedia und führen Sie es aus!
+- Modifizieren Sie das Beispiel so, dass Sie folgende URL abrufen https://jsonplaceholder.typicode.com/posts/1 und dabei den Media Type JSON anfordern!
