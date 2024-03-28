@@ -12,9 +12,9 @@ public class ProgramSplitter {
 
 		try {
 			br = new BufferedReader(new FileReader(path));
-			bwInformaticsAbstract = new BufferedWriter(new FileWriter("resources\\output\\exercise16InformaticsAbstract.txt"));
-			bwInformaticsBusiness = new BufferedWriter(new FileWriter("resources\\output\\exercise16InformaticsBusiness.txt"));
-			bwElectronicsCommerce = new BufferedWriter(new FileWriter("resources\\output\\exercise16ElectronicsCommerce.txt"));
+			bwInformaticsAbstract = new BufferedWriter(new FileWriter("src\\main\\resources\\output\\exercise16InformaticsAbstract.txt"));
+			bwInformaticsBusiness = new BufferedWriter(new FileWriter("src\\main\\resources\\output\\exercise16InformaticsBusiness.txt"));
+			bwElectronicsCommerce = new BufferedWriter(new FileWriter("src\\main\\resources\\output\\exercise16ElectronicsCommerce.txt"));
 
 			String data;
 			while ((data = br.readLine()) != null) {
@@ -61,8 +61,8 @@ public class ProgramSplitter {
 		// a) Buffered Reader eignen sich zum zeilenweise Einlesen
 		
 		try {
-			new ProgramSplitter().splitProgram("resources\\exercise16MatriculationNumbers.txt");
-			new ProgramSplitter().splitProgram("resources\\exercise16MatriculationNumbersError.txt");
+			new ProgramSplitter().splitProgram("src\\main\\resources\\exercise16MatriculationNumbers.txt");
+			new ProgramSplitter().splitProgram("src\\main\\resources\\exercise16MatriculationNumbersError.txt");
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
