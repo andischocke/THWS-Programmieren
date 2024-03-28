@@ -719,9 +719,17 @@ Ein Cyborg ist sowohl ein Mensch als auch ein Roboter. Trotz des Stresses den da
 
 ### Übungsblatt 14
 #### Aufgabe 1: (Klasseninvarianten)
-- Was ist eine Klasseninvariante (in einem Satz)?
-- Gegeben sei eine Klasse `Person` mit den Attributen `vorname` und `nachname`. Der Softwarevertrag zu der Klasse beinhaltet, dass Vorname und Nachname immer gesetzt sein müssen. Formulieren Sie die entsprechende Klasseninvariante.
-- Gegeben ist die Klasse `Person`. Durch Aufruf der init()‐Methode wird `vorname` und `nachname` des Personenobjekts anhand der übergebenen id durch Daten aus einer Datei befüllt. Weshalb wird die Klasseninvariante durch folgende Implementierung verletzt?
+Was ist eine Klasseninvariante (in einem Satz)?
+<details><summary>Lösung</summary>
+    Eine Klasseninvariante ist eine Bedingung oder Eigenschaft, die für alle Instanzen einer Klasse während ihres Lebenszyklus gültig bleibt.
+</details>
+
+Gegeben sei eine Klasse `Person` mit den Attributen `vorname` und `nachname`. Der Softwarevertrag zu der Klasse beinhaltet, dass Vorname und Nachname immer gesetzt sein müssen. Formulieren Sie die entsprechende Klasseninvariante.
+<details><summary>Lösung</summary>
+    Die Klasseninvariante für die Klasse Person lautet: "Vorname und Nachname müssen für jede Instanz von Person definiert und nicht null sein."
+</details>
+
+Gegeben ist die Klasse `Person`. Durch Aufruf der init()‐Methode wird `vorname` und `nachname` des Personenobjekts anhand der übergebenen id durch Daten aus einer Datei befüllt. Weshalb wird die Klasseninvariante durch folgende Implementierung verletzt?
 ```java
 public class Person {
     private String vorname;
@@ -743,7 +751,11 @@ public class Person {
     }
 }
 ```
-- Die Personen‐Klasse wurde durch setter ergänzt. Wie kann die Klasseninvariante jetzt verletzt werden?
+<details><summary>Lösung</summary>
+    Die Klasseninvariante wird durch diese Implementierung verletzt, weil die init()-Methode nicht sicherstellt, dass vorname und nachname immer gesetzt sind. 
+</details>
+
+Die Personen‐Klasse wurde durch setter ergänzt. Wie kann die Klasseninvariante jetzt verletzt werden?
 ```java
 public class Person {
     private String vorname;
@@ -774,6 +786,9 @@ public class Person {
     }
 }
 ```
+<details><summary>Lösung</summary>
+    Die Klasseninvariante kann jetzt durch direkten Aufruf der Setter-Methoden verletzt werden, wenn jemand einen null-Wert an setVorname() oder setNachname() übergibt
+</details>
 
 #### Aufgabe 2: (Komplexe Datentypen vs. Klassen)
 Legen Sie ein package `prozedural` an! Erstellen Sie je einen komplexen Datentypen für einen `Kreis` und für ein `Quadrat` in dem package `prozedural`. Schreiben Sie ferner eine Klasse `Flächenberechner`, die eine Methode `berechneFläche` anbietet. Die Methode soll ein Object entgegennehmen. Egal ob das übergebene Object ein `Kreis` oder ein `Quadrat` ist, soll die entsprechende Fläche korrekt berechnet und zurückgegeben werden. Legen Sie in einem Hauptprogramm ein Objekt von `Kreis` an und lassen Sie die Fläche berechnen.
@@ -804,6 +819,20 @@ public static int potenz(int basis, int exponent) {
     return ergebnis;
 }
 ```
+<details><summary>Lösung</summary>
+
+Vorbedingungen:
+- Die Methode potenz() erwartet zwei Ganzzahlenparameter basis und exponent.
+- Die basis darf nicht negativ sein, da die Potenzfunktion für negative Basen nicht definiert ist.
+- Der exponent darf nicht negativ sein, da negative Exponenten in dieser Implementierung nicht unterstützt werden.
+- Der exponent darf nicht zu groß sein, um einen potenziellen Überlauf des Integer-Datentyps zu vermeiden.
+
+Nachbedingungen:
+- Die Methode gibt die Potenz von basis mit dem exponent zurück.
+- Das Ergebnis wird als Ganzzahl zurückgegeben.
+- Wenn exponent gleich Null ist, ist das Ergebnis immer 1.
+</details>
+
 ```java
 public static void bubbleSort(int... numArray) {
     int n = numArray.length;
@@ -820,6 +849,18 @@ public static void bubbleSort(int... numArray) {
     }
 }
 ```
+<details><summary>Lösung</summary>
+
+Vorbedingungen:
+- Die Methode erwartet ein Array von Ganzzahlen als Argument.
+- Das übergebene Array darf nicht null sein.
+
+Nachbedingungen:
+- Das übergebene Array wird nach dem Aufruf der Methode in aufsteigender Reihenfolge sortiert sein.
+- Das Array bleibt unverändert, wenn es bereits sortiert war.
+- Die Methode gibt keinen Rückgabewert zurück.
+</details>
+
 ```java
 public class Rechteck {
     double laenge;
@@ -835,6 +876,15 @@ public class Rechteck {
     }
 }
 ```
+<details><summary>Lösung</summary>
+
+Vorbedingungen:
+- Die Länge (laenge) und Breite (breite) müssen größer als 0 sein, da ein Rechteck mit negativer Länge oder Breite nicht sinnvoll ist.
+
+Nachbedingungen:
+- Nachdem der Konstruktor aufgerufen wurde, sind die Attribute laenge und breite des Rechtecks entsprechend den übergebenen Werten initialisiert.
+- Die Methode gibt die korrekte Fläche des Rechtecks zurück, berechnet als das Produkt von Länge und Breite.
+</details>
 
 #### Aufgabe 4: (Liskovsches Substitutionsprinzip)
 Gegeben sei ein Interface List mit den Methoden:
@@ -865,6 +915,9 @@ classDiagram
     NaturallyOrderedList <|-- SortedList
 ```
 Verstößt diese Implementierung gegen das Liskovsche Substitutionsprinzip (LSP)? Wenn ja, warum und wie kann man diesen Verstoß umgehen? Wenn nein, begründen Sie, warum das LSP eingehalten wird!
+<details><summary>Lösung</summary>
+Ja, die Implementierung verstößt gegen das Liskovsche Substitutionsprinzip (LSP). Das LSP besagt, dass eine Subklasse sich so verhalten muss, dass sie ohne Änderungen an einer Stelle eingesetzt werden kann, an der ihre Basisklasse verwendet wird. In diesem Fall erwartet das Interface List für die add-Methode, dass der übergebene String in die Liste eingefügt wird. Bei der Implementierung von SortedList wird jedoch nicht nur der String eingefügt, sondern die Liste auch noch sortiert. Dieses zusätzliche Verhalten könnte unerwartete Nebenwirkungen haben und das Verhalten der Basisklasse verletzen. Um diesen Verstoß zu umgehen, könnte man eine andere Strategie wählen. Anstatt von NaturallyOrderedList zu erben, könnte SortedList direkt das Interface List implementieren und die Sortierung intern handhaben, ohne von einer anderen Klasse zu erben. Dadurch bleibt das Verhalten der add-Methode im Einklang mit der Erwartung des Interfaces List.
+</details>
 
 ### Übungsblatt 15 
 #### Aufgabe 1: (Exceptions) 
