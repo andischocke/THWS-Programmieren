@@ -2,8 +2,8 @@ package exercise15.task4;
 
 public class CopyTime
 {
-    public String inPath = "resources\\exercise15.svg";
-    public String outPath = "resources\\output\\exercise15Copy.svg";
+    public String inPath = "src\\main\\resources\\exercise15.svg";
+    public String outPath = "src\\main\\resources\\exercise15Copy.svg";
 
     public long getCopyTime(InterfaceCopier copier)
     {
