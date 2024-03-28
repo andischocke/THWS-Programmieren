@@ -130,17 +130,16 @@ Ausgabe:
 #### Aufgabe 4:
 Schreiben Sie ein Programm `Primzahlen`, welches für eine vom Benutzer eingegebene ganze Zahl ermittelt, ob diese eine Primzahl ist.
 
-Beispiel 1:
+Beispiel:
 > Bitte zu untersuchende Zahl eingeben: 47  
 > Untersuchte Zahl ist eine Primzahl
-
-Beispiel 2:
+> 
 > Bitte zu untersuchende Zahl eingeben: 51  
 > Untersuchte Zahl ist keine Primzahl
 
 ### Übungsblatt 5
-#### Aufgabe 1: (Temperaturtabelle) (1 Punkt)
-Schreiben Sie ein Programm namens Temperaturumwandlung, das eine Temperaturtabelle auf dem Bildschirm gemäß der Formel $Grad \\ Celsius = \frac{5}{9} * (Grad \\ Fahrenheit - 32)$ ausgibt. Die Temperaturtabelle soll in der ersten Spalte Temperaturwerte in Fahrenheit (als ganze Zahl von 0 Grad Fahrenheit bis 300 Fahrenheit, jeweils inklusive) enthalten und in der zweiten Spalte die entsprechenden Temperaturwerte in Celsius (vom Typ float) auf zwei Nachkommastellen abgeschnitten oder gerundet. Die Spalten sollen durch ein Tabulatorzeichen getrennt werden, ansonsten muss die Tabelle nicht formatiert sein.
+#### Aufgabe 1:
+Schreiben Sie ein Programm namens `Temperaturumwandlung`, das eine Temperaturtabelle auf dem Bildschirm gemäß der Formel $Grad \\ Celsius = \frac{5}{9} * (Grad \\ Fahrenheit - 32)$ ausgibt. Die Temperaturtabelle soll in der ersten Spalte Temperaturwerte in Fahrenheit (als ganze Zahl von 0 Grad Fahrenheit bis 300 Fahrenheit, jeweils inklusive) enthalten und in der zweiten Spalte die entsprechenden Temperaturwerte in Celsius (vom Typ float) auf zwei Nachkommastellen abgeschnitten oder gerundet. Die Spalten sollen durch ein Tabulatorzeichen getrennt werden, ansonsten muss die Tabelle nicht formatiert sein.
 
 | Fahrenheit | Celsius |
 | ---:       | ---:    |
@@ -151,8 +150,8 @@ Schreiben Sie ein Programm namens Temperaturumwandlung, das eine Temperaturtabel
 | 299        | 148.33  |
 | 300        | 148.88  |
 
-#### Aufgabe 2: (Querprodukt) (1 Punkt)
-Schreiben Sie ein Programm namens Querprodukt, welches das "Querprodukt" einer int-Zahl berechnet und dieses mit einer Meldung am Bildschirm anzeigt. Die int-Zahl soll von der Standardeingabe solange eingelesen werden, bis sie gültig ist (zwischen 0 und einer Million, jeweils inklusive). Bei Eingabe einer ungültigen int-Zahl soll zusätzlich eine Fehlermeldung erscheinen und ein erneutes Einlesen erfolgen. 
+#### Aufgabe 2:
+Schreiben Sie ein Programm namens `Querprodukt`, welches das "Querprodukt" einer int-Zahl berechnet und dieses mit einer Meldung am Bildschirm anzeigt. Die int-Zahl soll von der Standardeingabe solange eingelesen werden, bis sie gültig ist (zwischen 0 und einer Million, jeweils inklusive). Bei Eingabe einer ungültigen int-Zahl soll zusätzlich eine Fehlermeldung erscheinen und ein erneutes Einlesen erfolgen. 
 
 Beispiel:  
 > Geben Sie bitte eine Zahl ein: -3  
@@ -160,13 +159,10 @@ Beispiel:
 > Geben Sie bitte eine Zahl ein: 1348213  
 > FEHLER – Zahl ist ungültig.  
 > Geben Sie bitte eine Zahl ein: 3225  
-> Das Querprodukt der Zahl 3225 beträgt 60  
+> Das Querprodukt der Zahl 3225 beträgt 60
 
-#### Aufgabe 3: (Modellierung) (1 Punkt)
-Modellieren Sie schriftlich mit einem Struktogramm oder einem Aktivitätsdiagramm die Querproduktaufgabe!
-
-#### Aufgabe 4: (Potenz) (1 Punkt)
-Schreiben Sie ein Programm das die Potenz $a^b$ berechnet und das Ergebnis auf der Standardausgabe anzeigt. Sowohl die Basis $(a)$, als auch der Exponent $(b)$ werden über die Standardeingabe (a vom Typ double, b vom Typ int) eingelesen. In Abhängigkeit vom Exponenten $(b)$ gilt für $a^b$:
+#### Aufgabe 3:
+Bei dieser Aufgabe darf die Klasse Math und deren Methoden nicht verwendet werden. Schreiben Sie ein Programm das die `Potenz` $a^b$ berechnet und das Ergebnis auf der Standardausgabe anzeigt. Sowohl die Basis $(a)$, als auch der Exponent $(b)$ werden über die Standardeingabe (a vom Typ double, b vom Typ int) eingelesen. In Abhängigkeit vom Exponenten $(b)$ gilt für $a^b$:
 ```math
 \begin{align*}
 b > 0 &: a^b = \overbrace{a * a * a * ... * a}^{b-mal} \\
@@ -174,7 +170,6 @@ b = 0 &: a^0 = 1 \\
 b < 0 &: a^b = \frac{1}{\underbrace{a * a * a * ... * a}_{b-mal}}
 \end{align*}
 ```
-Bei dieser Aufgabe darf die Klasse Math und deren Methoden nicht verwendet werden.
 
 ### Übungsblatt 6
 #### Aufgabe 1: (π-Rechtecknäherung) (1 Punkt)
