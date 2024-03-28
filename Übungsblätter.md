@@ -1,5 +1,19 @@
 # Übungsblätter
-Alle Übungsblätter mit Aufgaben aus den Modulen "Programmieren 1" und "Programmieren 2", die an der Technischen Hochschule Würzburg-Schweinfurt angeboten werden.
+Alle Übungsblätter mit Aufgaben aus den Modulen "Programmieren 1" und "Programmieren 1", die an der Technischen Hochschule Würzburg-Schweinfurt angeboten werden.
+
+| [Programmieren 1](#programmieren-1) | [Programmieren 2](#programmieren-2) |
+| :---                                | :---                                |
+| [Übungsblatt 1](#übungsblatt-1)     | [Übungsblatt 12](#übungsblatt-12)   |
+| [Übungsblatt 2](#übungsblatt-2)     | [Übungsblatt 13](#übungsblatt-13)   |
+| [Übungsblatt 3](#übungsblatt-3)     | [Übungsblatt 14](#übungsblatt-14)   |
+| [Übungsblatt 4](#übungsblatt-4)     | [Übungsblatt 15](#übungsblatt-15)   |
+| [Übungsblatt 5](#übungsblatt-5)     | [Übungsblatt 16](#übungsblatt-16)   |
+| [Übungsblatt 6](#übungsblatt-6)     | [Übungsblatt 17](#übungsblatt-17)   |
+| [Übungsblatt 7](#übungsblatt-7)     | [Übungsblatt 18](#übungsblatt-18)   |
+| [Übungsblatt 8](#übungsblatt-8)     | [Übungsblatt 19](#übungsblatt-19)   |
+| [Übungsblatt 9](#übungsblatt-9)     | [Übungsblatt 20](#übungsblatt-20)   |
+| [Übungsblatt 10](#übungsblatt-10)   |                                     |
+| [Übungsblatt 11](#übungsblatt-11)   |                                     |
 
 ## Programmieren 1
 
@@ -296,7 +310,7 @@ Beispiel:
 > java Parameterübergabe 10 2 3 –  
 > Ausgabe des Programms ist 5 $(= 10 - 2 - 3)$
 
-### Übungsblatt 10 (bzv-relevant)
+### Übungsblatt 10
 #### Aufgabe 1: (1 Punkt) (Produktionszähler)
 Erweitern Sie die Klasse Auto (Übungsblatt 9 / Aufgabe 1 und 2) um eine static Variable, mit deren Hilfe die Anzahl der produzierten Autos gezählt wird. Schreiben Sie weiterhin eine Klassenmethode `berechneUmsatz(int durchschnittspreis)`, welche anhand des übergebenen durchschnittlichen Verkaufspreises den Bruttoumsatz der Fahrzeugproduktion berechnet und diesen zurückliefert.
 
@@ -701,7 +715,7 @@ Der Mensch schätzt die Situation allerdings in 25% der Fälle nicht genau ein u
 
 Ein Cyborg ist sowohl ein Mensch als auch ein Roboter. Trotz des Stresses den das Aufladen, Essen, Warten, Schlafen, etc. mit sich bringt, fährt auch ein Cyborg gerne Auto und wird dort Gefahrensituationen ausgesetzt. Wenn sich der Menschanteil und der Roboteranteil in ihrer Entscheidung einig sind, trifft der Cyborg die gleiche Entscheidung. Wenn der Menschanteil und der Roboteranteil unterschiedlicher Ansicht sind, dann trifft der Cyborg zufällig eine der beiden Entscheidungen.
 
-## Übungsblatt 14
+### Übungsblatt 14
 #### Aufgabe 1: (Klasseninvarianten)
 - Was ist eine Klasseninvariante (in einem Satz)?
 - Gegeben sei eine Klasse `Person` mit den Attributen `vorname` und `nachname`. Der Softwarevertrag zu der Klasse beinhaltet, dass Vorname und Nachname immer gesetzt sein müssen. Formulieren Sie die entsprechende Klasseninvariante.
