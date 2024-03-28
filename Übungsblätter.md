@@ -1078,6 +1078,35 @@ Erstellen Sie ein Eclipse-Projekt und legen Sie Jersey Client Bibliothek auf Ihr
 
 #### Aufgabe 2: (Threads, Collections) 
 - Modifizieren Sie die Klasse `PrimzahlThread` dahingehend, dass der `PrimzahlThread` im Konstruktor eine Liste der zu überprüfenden Zahlen entgegennimmt.
+```java
+public class PrimzahlThread extends Thread {
+    int zahlZumTesten;
+    String ergebnis;
+
+    public PrimzahlThread(int zahlZumTesten) {
+        this.zahlZumTesten = zahlZumTesten;
+    }
+
+    public boolean testeObPrimzahl() {
+        if (zahlZumTesten < 2) {
+            return false;
+        }
+        
+        for (int divisor = 2; divisor < zahlZumTesten; divisor++) {
+            if (zahlZumTesten % divisor == 0) 
+                return false;
+        }
+        
+        return true;
+    }
+
+    @Override
+    public void run() {
+        boolean istPrimzahl = testeObPrimzahl();
+        ergebnis = zahlZumTesten + " ist " + (istPrimzahl ? "eine " : "keine ") + "Primzahl.";
+    }
+}
+```
 - In der run-Methode soll der `PrimzahlThread` nun alle Zahlen der Liste daraufhin überprüfen, ob Sie eine Primzahl sind. Anstelle des Strings ergebnis soll der Thread eine Map ergebnis haben. Für jede untersuchte Primzahl soll ein Eintrag der folgenden Art in der Map ergänzt werden. Beispiel: 341 ist `false` und 633910099 ist `true`.
 - In der main-Methode sollen mehrere PrimzahlThread-Objekte gestartet werden. Dann soll der Haupt-Thread auf die Threads warten und die Ergebnisse der einzelnen Threads in einer einzigen Map zusammenlegen.
 - Die Mappings sollen wie in Aufgabe b) dargestellt ausgegeben werden. 
