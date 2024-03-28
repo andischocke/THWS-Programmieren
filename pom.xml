@@ -24,7 +24,8 @@
         <dependency>
             <groupId>org.glassfish.jersey.core</groupId>
             <artifactId>jersey-client</artifactId>
-            <version>LATEST</version>
+            <version>4.0.0-M1</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 </project>
