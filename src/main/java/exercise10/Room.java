@@ -9,6 +9,13 @@ public class Room
     private Lecture lecture;
     //endregion
 
+    public Room(String id, int capacity)
+    {
+        this.id = id;
+        this.capacity = capacity;
+        students = new Student[this.capacity];
+    }
+
     //region Getter and Setter
     public String getId()
     {
@@ -44,18 +51,11 @@ public class Room
     {
         return lecture;
     }
+    //endregion
 
     public void setLecture(Lecture lecture)
     {
         this.lecture = lecture;
-    }
-    //endregion
-
-    public Room(String id, int capacity)
-    {
-        this.id = id;
-        this.capacity = capacity;
-        students = new Student[this.capacity];
     }
 
     public void enterRoom(Student student)

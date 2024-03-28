@@ -2,7 +2,7 @@ package exercise14.procedural;
 
 public class Circle
 {
-    private double radius;
+    private final double radius;
 
     public Circle(double radius)
     {

@@ -6,22 +6,22 @@ public class StudentId extends Identification
     private int matriculationNumber;
     //endregion
 
+    //region Constructors
+    public StudentId(String prename, String surname, String gender, int matriculationNumber)
+    {
+        super(prename, surname, gender);
+        this.matriculationNumber = matriculationNumber;
+    }
+
     //region Getter and Setter
     public int getMatriculationNumber()
     {
         return matriculationNumber;
     }
+    //endregion
 
     public void setMatriculationNumber(int matriculationNumber)
     {
-        this.matriculationNumber = matriculationNumber;
-    }
-    //endregion
-
-    //region Constructors
-    public StudentId(String prename, String surname, String gender, int matriculationNumber)
-    {
-        super(prename, surname, gender);
         this.matriculationNumber = matriculationNumber;
     }
     //endregion

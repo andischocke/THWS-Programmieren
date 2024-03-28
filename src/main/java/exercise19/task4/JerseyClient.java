@@ -2,13 +2,20 @@ package exercise19.task4;
 
 import jakarta.ws.rs.client.Client;
 import jakarta.ws.rs.client.ClientBuilder;
-import jakarta.ws.rs.client.WebTarget;
 import jakarta.ws.rs.client.Invocation.Builder;
+import jakarta.ws.rs.client.WebTarget;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
 public class JerseyClient
 {
+    public static void main(String[] args)
+    {
+        JerseyClient client = new JerseyClient();
+        client.request();
+        client.requestChain();
+    }
+
     public void request()
     {
         Client newClient = ClientBuilder.newClient();
@@ -30,12 +37,5 @@ public class JerseyClient
                 .get();
         String s = response.readEntity(String.class);
         System.out.println(s);
-    }
-
-    public static void main(String[] args)
-    {
-        JerseyClient client = new JerseyClient();
-        client.request();
-        client.requestChain();
     }
 }

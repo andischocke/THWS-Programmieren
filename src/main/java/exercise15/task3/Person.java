@@ -20,6 +20,13 @@ public class Person
         }
     }
 
+    public static void main(String[] ags)
+    {
+        new Person("Max", "Mustermann", 80333, "München", "Müllergasse", "33");
+        new Person("max", "mustermann", 80333, "münchen", "müllergasse", "33");
+        new Person("Max", "Mustermann", 80333, "München", "Müllergasse", "a3");
+    }
+
     public String checkUpperCase(String string)
     {
         if (Character.isUpperCase(string.charAt(0)))
@@ -40,12 +47,5 @@ public class Person
         {
             throw new RuntimeException(string + " has to start with a digit");
         }
-    }
-
-    public static void main(String[] ags)
-    {
-        new Person("Max", "Mustermann", 80333, "München", "Müllergasse", "33");
-        new Person("max", "mustermann", 80333, "münchen", "müllergasse", "33");
-        new Person("Max", "Mustermann", 80333, "München", "Müllergasse", "a3");
     }
 }

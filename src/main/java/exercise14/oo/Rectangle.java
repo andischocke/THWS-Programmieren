@@ -2,8 +2,8 @@ package exercise14.oo;
 
 public class Rectangle implements InterfaceShape
 {
-    private double sideX;
-    private double sideY;
+    private final double sideX;
+    private final double sideY;
 
     public Rectangle(double sideX, double sideY)
     {

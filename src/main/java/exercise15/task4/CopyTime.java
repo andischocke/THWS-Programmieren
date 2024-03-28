@@ -5,6 +5,12 @@ public class CopyTime
     public String inPath = "src\\main\\resources\\exercise15.svg";
     public String outPath = "src\\main\\resources\\output\\exercise15Copy.svg";
 
+    public static void main(String[] args)
+    {
+        CopyTime ct = new CopyTime();
+        ct.differenceTime();
+    }
+
     public long getCopyTime(InterfaceCopier copier)
     {
         long startTime = System.nanoTime();
@@ -24,11 +30,5 @@ public class CopyTime
         System.out.printf("Time for buffered copy: %d nanoseconds\n", bufferedTime);
         System.out.printf("Time for unbufferdCopy: %d nanoseconds\n", unbufferedTime);
         System.out.printf("Difference: %d nanoseconds\n", Math.abs(unbufferedTime - bufferedTime));
-    }
-
-    public static void main(String[] args)
-    {
-        CopyTime ct = new CopyTime();
-        ct.differenceTime();
     }
 }

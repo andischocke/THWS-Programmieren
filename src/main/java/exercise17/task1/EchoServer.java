@@ -7,6 +7,22 @@ import java.net.Socket;
 public class EchoServer extends Thread
 {
 
+    public static void main(String[] arg)
+    {
+        try
+        {
+            Thread server = new EchoServer();
+            Thread client = new Client();
+            server.start();
+            client.start();
+            server.join();
+            client.join();
+        } catch (Exception e)
+        {
+            throw new RuntimeException(e);
+        }
+    }
+
     @Override
     public void run()
     {
@@ -42,22 +58,6 @@ public class EchoServer extends Thread
         } catch (IOException e)
         {
             e.printStackTrace();
-        }
-    }
-
-    public static void main(String[] arg)
-    {
-        try
-        {
-            Thread server = new EchoServer();
-            Thread client = new Client();
-            server.start();
-            client.start();
-            server.join();
-            client.join();
-        } catch (Exception e)
-        {
-            throw new RuntimeException(e);
         }
     }
 }

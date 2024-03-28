@@ -7,7 +7,7 @@ public class Reihenberechnung
         double series = 0;
         double summand = 1;
 
-        System.out.printf("Series\tSummand\n");
+        System.out.print("Series\tSummand\n");
         for (int k = 1; summand > Math.pow(10, -5); k++)
         {
             summand = 6.0 * (1.0 / Math.pow(k, 2));

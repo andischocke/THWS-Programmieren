@@ -13,16 +13,6 @@ public class Company
         this.departments = departments;
     }
 
-    public String toString()
-    {
-        String string = String.format("Company:\t%s\n", name);
-        for (Department d : departments)
-        {
-            string += d;
-        }
-        return string;
-    }
-
     public static void main(String[] args)
     {
         Manager manager0 = new Manager(100, "A", "A", 2000);
@@ -46,5 +36,15 @@ public class Company
         manager0.promote(manager0);
         manager0.promote(employeeList0.get(0));
         System.out.println(company);
+    }
+
+    public String toString()
+    {
+        String string = String.format("Company:\t%s\n", name);
+        for (Department d : departments)
+        {
+            string += d;
+        }
+        return string;
     }
 }

@@ -8,6 +8,14 @@ public class Auto
     private String color;
     //endregion
 
+    //region Constructors
+    public Auto(String brand, int displacement, String color)
+    {
+        this.brand = brand;
+        this.displacement = displacement > 0 ? displacement : 1600;
+        this.color = color;
+    }
+
     //region Getter and Setter
     public String getBrand()
     {
@@ -33,18 +41,10 @@ public class Auto
     {
         return color;
     }
+    //endregion
 
     public void setColor(String color)
     {
-        this.color = color;
-    }
-    //endregion
-
-    //region Constructors
-    public Auto(String brand, int displacement, String color)
-    {
-        this.brand = brand;
-        this.displacement = displacement > 0 ? displacement : 1600;
         this.color = color;
     }
     //endregion

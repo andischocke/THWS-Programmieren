@@ -20,7 +20,7 @@ public abstract class AbstractIntelligence
 
     public void printDecision(EnumDirection threat)
     {
-        String name = this.getClass().getSimpleName().toString();
+        String name = this.getClass().getSimpleName();
         String decision = this.decide(threat).toString();
         System.out.printf("Threat was %s. %20s decision: %s\n", threat.toString(), name, decision);
     }

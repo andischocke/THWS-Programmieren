@@ -5,33 +5,39 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
-class TestBinaryTree {
-	BinaryTree<String> tree;
-	
-	@BeforeEach
-	void setUp() throws Exception {
-		tree = new BinaryTree<>();
-	}
+class TestBinaryTree
+{
+    BinaryTree<String> tree;
 
-	@AfterEach
-	void tearDown() throws Exception {
-	}
+    @BeforeEach
+    void setUp() throws Exception
+    {
+        tree = new BinaryTree<>();
+    }
 
-	@Test
-	void testRoot() {
-		assertEquals(null, tree.root);
-	}
-	
-	@Test
-	void testNodes() {
-		tree.addNodeToTree(new BinaryTreeNode<>("Cool"));
-		tree.addNodeToTree(new BinaryTreeNode<>("Aaronson"));
-		tree.addNodeToTree(new BinaryTreeNode<>("Zylla"));
-		tree.addNodeToTree(new BinaryTreeNode<>("Garrett"));
-		assertEquals("Cool", tree.root.element);
-		assertEquals("Aaronson", tree.root.left.element);
-		assertEquals("Zylla", tree.root.right.element);
-		assertEquals("Garrett", tree.root.right.left.element);
-	}
+    @AfterEach
+    void tearDown() throws Exception
+    {
+    }
+
+    @Test
+    void testRoot()
+    {
+        assertNull(tree.root);
+    }
+
+    @Test
+    void testNodes()
+    {
+        tree.addNodeToTree(new BinaryTreeNode<>("Cool"));
+        tree.addNodeToTree(new BinaryTreeNode<>("Aaronson"));
+        tree.addNodeToTree(new BinaryTreeNode<>("Zylla"));
+        tree.addNodeToTree(new BinaryTreeNode<>("Garrett"));
+        assertEquals("Cool", tree.root.element);
+        assertEquals("Aaronson", tree.root.left.element);
+        assertEquals("Zylla", tree.root.right.element);
+        assertEquals("Garrett", tree.root.right.left.element);
+    }
 }

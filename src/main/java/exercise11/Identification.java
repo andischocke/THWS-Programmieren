@@ -8,6 +8,14 @@ public class Identification
     private String gender;
     //endregion
 
+    //region Constructors
+    public Identification(String prename, String surname, String gender)
+    {
+        this.prename = prename;
+        this.surname = surname;
+        this.gender = gender;
+    }
+
     //region Getter and Setter
     public String getPrename()
     {
@@ -33,18 +41,10 @@ public class Identification
     {
         return gender;
     }
+    //endregion
 
     public void setGender(String gender)
     {
-        this.gender = gender;
-    }
-    //endregion
-
-    //region Constructors
-    public Identification(String prename, String surname, String gender)
-    {
-        this.prename = prename;
-        this.surname = surname;
         this.gender = gender;
     }
     //endregion

@@ -2,7 +2,7 @@ package exercise14.procedural;
 
 public class Square
 {
-    private double side;
+    private final double side;
 
     public Square(double side)
     {

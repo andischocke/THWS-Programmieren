@@ -7,6 +7,22 @@ import java.net.Socket;
 public class HangmanServer extends Thread
 {
 
+    public static void main(String[] args)
+    {
+        try
+        {
+            Thread server = new HangmanServer();
+            Thread client = new Client();
+            server.start();
+            client.start();
+            server.join();
+            client.join();
+        } catch (Exception e)
+        {
+            throw new RuntimeException(e);
+        }
+    }
+
     @Override
     public void run()
     {
@@ -44,22 +60,6 @@ public class HangmanServer extends Thread
         } catch (IOException e)
         {
             e.printStackTrace();
-        }
-    }
-
-    public static void main(String[] args)
-    {
-        try
-        {
-            Thread server = new HangmanServer();
-            Thread client = new Client();
-            server.start();
-            client.start();
-            server.join();
-            client.join();
-        } catch (Exception e)
-        {
-            throw new RuntimeException(e);
         }
     }
 }

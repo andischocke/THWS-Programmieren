@@ -2,7 +2,7 @@ package exercise14.oo;
 
 public class Square implements InterfaceShape
 {
-    private double side;
+    private final double side;
 
     public Square(double side)
     {

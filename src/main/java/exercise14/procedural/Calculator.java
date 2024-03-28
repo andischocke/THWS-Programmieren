@@ -3,6 +3,19 @@ package exercise14.procedural;
 public class Calculator
 {
 
+    public static void main(String[] args)
+    {
+        System.out.println("Calculation: procedural");
+        Calculator calculator = new Calculator();
+        Circle circle = new Circle(5);
+        Square square = new Square(5);
+        Rectangle rectangle = new Rectangle(5, 5);
+
+        calculator.printCalculation(circle);
+        calculator.printCalculation(square);
+        calculator.printCalculation(rectangle);
+    }
+
     public double calculateArea(Object object)
     {
         double area = -1;
@@ -49,18 +62,5 @@ public class Calculator
         double area = calculateArea(object);
         double perimeter = calculatePerimeter(object);
         System.out.printf("Shape: %-20sArea: %-20.2f Perimeter: %.2f\n", name, area, perimeter);
-    }
-
-    public static void main(String[] args)
-    {
-        System.out.println("Calculation: procedural");
-        Calculator calculator = new Calculator();
-        Circle circle = new Circle(5);
-        Square square = new Square(5);
-        Rectangle rectangle = new Rectangle(5, 5);
-
-        calculator.printCalculation(circle);
-        calculator.printCalculation(square);
-        calculator.printCalculation(rectangle);
     }
 }

@@ -2,8 +2,10 @@ package exercise09;
 
 import java.util.ArrayList;
 
-public class Speisekarte {
-    public static void main(String[] args) {
+public class Speisekarte
+{
+    public static void main(String[] args)
+    {
         Pizza[] pizzas = new Pizza[10];
         pizzas[0] = new Pizza(33, "Pizza Ananas");
         pizzas[0].addVariation(26, 4.00);
@@ -55,30 +57,36 @@ public class Speisekarte {
         pizzas[9].addVariation(32, 4.50);
         pizzas[9].addVariation(50, 10.00);
 
-        for (Pizza pizza : pizzas) {
+        for (Pizza pizza : pizzas)
+        {
             System.out.println(pizza);
         }
     }
 
-    public static class Pizza {
-        private int number;
-        private String name;
-        private ArrayList<PizzaVariation> variations = new ArrayList<>();
+    public static class Pizza
+    {
+        private final int number;
+        private final String name;
+        private final ArrayList<PizzaVariation> variations = new ArrayList<>();
 
-        public Pizza(int number, String name) {
+        public Pizza(int number, String name)
+        {
             this.number = number;
             this.name = name;
         }
 
-        public void addVariation(double diameter, double price) {
+        public void addVariation(double diameter, double price)
+        {
             variations.add(new PizzaVariation(diameter, price));
         }
 
         @Override
-        public String toString() {
+        public String toString()
+        {
             StringBuilder sb = new StringBuilder();
             sb.append("Pizza #").append(number).append(": ").append(name).append("\n");
-            for (PizzaVariation variation : variations) {
+            for (PizzaVariation variation : variations)
+            {
                 sb.append(String.format("\t%f cm: %.2f EUR\n", variation.getDiameter(), variation.getPrice()));
             }
             return sb.toString();
@@ -86,20 +94,24 @@ public class Speisekarte {
 
     }
 
-    public static class PizzaVariation {
-        private double diameter;
-        private double price;
+    public static class PizzaVariation
+    {
+        private final double diameter;
+        private final double price;
 
-        public PizzaVariation(double diameter, double price) {
+        public PizzaVariation(double diameter, double price)
+        {
             this.diameter = diameter;
             this.price = price;
         }
 
-        public double getDiameter() {
+        public double getDiameter()
+        {
             return diameter;
         }
 
-        public double getPrice() {
+        public double getPrice()
+        {
             return price;
         }
     }

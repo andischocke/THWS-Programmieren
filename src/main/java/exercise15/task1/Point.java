@@ -5,6 +5,18 @@ public class Point
     public int x;
     public int y;
 
+    public static void main(String[] args)
+    {
+        try
+        {
+            new Point().shiftPoint(100, 100);
+            new Point().shiftPoint(-100, -100);
+        } catch (PointNotOnDisplayException e)
+        {
+            System.out.println(e.getMessage());
+        }
+    }
+
     public void shiftPoint(int targetX, int targetY) throws PointNotOnDisplayException
     {
         if (targetX < 0 || targetY < 0 || targetX > 1920 || targetY > 1080)
@@ -15,18 +27,6 @@ public class Point
             this.x = targetX;
             this.y = targetY;
             System.out.println("Point got shifted.");
-        }
-    }
-
-    public static void main(String[] args)
-    {
-        try
-        {
-            new Point().shiftPoint(100, 100);
-            new Point().shiftPoint(-100, -100);
-        } catch (PointNotOnDisplayException e)
-        {
-            System.out.println(e.getMessage());
         }
     }
 }

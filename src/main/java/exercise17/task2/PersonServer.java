@@ -10,6 +10,22 @@ import java.util.ArrayList;
 public class PersonServer extends Thread
 {
 
+    public static void main(String[] args)
+    {
+        try
+        {
+            Thread server = new PersonServer();
+            Thread client = new PersonClient();
+            server.start();
+            client.start();
+            server.join();
+            client.join();
+        } catch (Exception e)
+        {
+            throw new RuntimeException(e);
+        }
+    }
+
     @Override
     public void run()
     {
@@ -40,22 +56,6 @@ public class PersonServer extends Thread
         } catch (Exception e)
         {
             e.printStackTrace();
-        }
-    }
-
-    public static void main(String[] args)
-    {
-        try
-        {
-            Thread server = new PersonServer();
-            Thread client = new PersonClient();
-            server.start();
-            client.start();
-            server.join();
-            client.join();
-        } catch (Exception e)
-        {
-            throw new RuntimeException(e);
         }
     }
 }

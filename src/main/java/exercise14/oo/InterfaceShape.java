@@ -3,7 +3,7 @@ package exercise14.oo;
 public interface InterfaceShape
 {
 
-    public double calculateArea();
+    double calculateArea();
 
-    public double calculatePerimeter();
+    double calculatePerimeter();
 }

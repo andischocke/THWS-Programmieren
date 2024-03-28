@@ -8,6 +8,13 @@ public class Lecture
     private String program;
     //endregion
 
+    public Lecture(String name, String lecturer, String program)
+    {
+        this.name = name;
+        this.lecturer = lecturer;
+        this.program = program;
+    }
+
     //region Getter and Setter
     public String getName()
     {
@@ -33,17 +40,10 @@ public class Lecture
     {
         return program;
     }
+    //endregion
 
     public void setProgram(String program)
     {
-        this.program = program;
-    }
-    //endregion
-
-    public Lecture(String name, String lecturer, String program)
-    {
-        this.name = name;
-        this.lecturer = lecturer;
         this.program = program;
     }
 

@@ -3,7 +3,7 @@ package exercise14.oo;
 public class Circle implements InterfaceShape
 {
 
-    private double radius;
+    private final double radius;
 
     public Circle(double radius)
     {

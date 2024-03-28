@@ -6,23 +6,23 @@ public class Auto extends exercise09.Auto
     private static int producedCars = 0;
     //endregion
 
-    //region Getter and Setter
-    public static int getProducedCars()
-    {
-        return producedCars;
-    }
-
-    public static void setProducedCars(int producedCars)
-    {
-        Auto.producedCars = producedCars;
-    }
-    //endregion
-
     //region Constructors
     public Auto(String brand, int displacement, String color)
     {
         super(brand, displacement, color);
         producedCars++;
+    }
+
+    //region Getter and Setter
+    public static int getProducedCars()
+    {
+        return producedCars;
+    }
+    //endregion
+
+    public static void setProducedCars(int producedCars)
+    {
+        Auto.producedCars = producedCars;
     }
     //endregion
 
