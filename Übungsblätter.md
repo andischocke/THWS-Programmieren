@@ -949,7 +949,7 @@ Welche Vorbedingungen sollten Sie an die Parameter stellen und welche Fehlerfäl
 #### Aufgabe 3: 
 Schreiben Sie eine Klasse Person mit den Attributen `vorname`, `nachname` und `adresse`. Eine Adresse bestehe wiederum aus `strasse`, `hausnummer`, `postleitzahl` und `ort`. Wenn eine Person angelegt wird, sollen folgende Regeln gelten:
 - `vorname`, `strasse` und `ort` sollen mit einem Großbuchstaben beginnen.
-- `hausnummer` muss mit einer Ziffer beginnen Wenn eine dieser Regeln verletzt wird, soll eine `ValidationException` geworfen werden.
+- `hausnummer` muss mit einer Ziffer beginnen Wenn eine dieser Regeln verletzt wird, soll eine `RuntimeException` geworfen werden.
 
 #### Aufgabe 4: (Stream, Dateien, Buffered Streams) 
 Die meisten Stream-Beispiele benutzten bisher nicht gepufferte Streams. read- und write-Aufrufe werden bei nicht gepufferten Streams direkt an das Betriebssystem weitergereicht. Dies führt bei häufigen Aufrufen zu Performanceeinbußen. Bspw. sind Dateizugriff, Netzzugriff, etc. relativ teure Operationen. Buffered Streams verwenden einen Puffer. Ein Puffer ist ein Zwischenspeicher im Hauptspeicher. Buffered Input Streams greifen nur auf das Betriebssystem zu, wenn der Puffer leer ist. Buffered Output Streams greifen nur auf das Betriebssystem zu, wenn der Puffer voll ist.
