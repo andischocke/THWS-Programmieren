@@ -18,17 +18,30 @@ Alle Übungsblätter mit Aufgaben aus den Modulen "Programmieren 1" und "Program
 ## Programmieren 1
 
 ### Übungsblatt 1
-#### Aufgabe 1: (0 Punkte)
-- Installieren Sie auf Ihrem eigenen Computer/Notebook das Java Development Kit (JDK) von Oracle. Ergänzen Sie die Umgebungsvariable PATH um das bin-Verzeichnis der JDK Installation.
-- Rufen Sie ein Konsolenfenster auf, z. B. Start -> Ausführen -> cmd und testen Sie die Befehle javac und java. Wenn beide Befehle ausgeführt wurden, haben Sie das JDK richtig konfiguriert.
+#### Aufgabe 1:
+Installieren Sie auf Ihrem eigenen Computer/Notebook das Java Development Kit (JDK) von Oracle. Ergänzen Sie die Umgebungsvariable PATH um das bin-Verzeichnis der JDK Installation.
+<details><summary>Lösung</summary>
+    
+1. Open the Run dialog with `Win + R`.
+2. Type `cmd` in the Run box and confirm with `ctrl + shift + enter`.
+3. Type `rundll32.exe sysdm.cpl,EditEnvironmentVariables` in the Command Prompt.
+4. Add the Java directory to the path variable.
+</details>
 
-#### Aufgabe 2: (2 Punkte)
-Erstellen Sie eine Datei Application.java, die bei Ausführung "Willkommen zu Programmieren 1" ausgibt.
-- Übersetzen und starten Sie das Programm auf der Konsole! Dokumentieren Sie stichpunktartig die dazu notwendigen Schritte! (1 Punkt)
-- Übersetzen und starten Sie das Programm mit Eclipse! Dokumentieren Sie stichpunktartig die dazu notwendigen Schritte! (1 Punkt)
+Rufen Sie ein Konsolenfenster auf, z. B. Start -> Ausführen -> cmd und testen Sie die Befehle javac und java. Wenn beide Befehle ausgeführt wurden, haben Sie das JDK richtig konfiguriert.
+<details><summary>Lösung</summary>
+    
+1. Open the Run dialog with `Win + R`.
+2. Type `cmd` in the Run box and confirm with `ctrl + shift + enter`.
+3. Type `javac` in the Command Prompt and press enter.
+4. Type `java` in the Command Prompt and press enter.
+</details>
 
-#### Aufgabe 3: (1 Punkt)
-Schreiben Sie ein Programm, welches folgenden Term korrekt berechnet und das Ergebnis ausgibt: $3 * (9 + 3) + 4 * 8$
+#### Aufgabe 2:
+Erstellen Sie eine Datei HelloWorld.java, die bei Ausführung "Hello World!" ausgibt. Übersetzen und starten Sie das Programm!
+
+#### Aufgabe 3:
+Erweitern Sie das Programm, sodass es den Term $3 * (9 + 3) + 4 * 8$ korrekt berechnet und das Ergebnis ausgibt.
 
 ### Übungsblatt 2
 #### Aufgabe 1: (1 Punkt) 
