@@ -953,3 +953,33 @@ Gegeben sei der ToUpperCaseWriter aus der Vorlesung.
 ### Aufgabe 4: (Unit Tests) 
 - Sie haben in der Aufgabe 13.1 in der Klasse LäuferImpl den Algorithmus zur Festlegung der erlaubten Felder auf einem Schachbrett implementiert. Schreiben Sie dazu geeignete Testfälle.
 - In der Aufgabe 13.2 haben sie einen Stack mit Hilfe einer Liste implementiert. Schreiben Sie hierzu geeignete Unit Tests, die das Verhalten der Stack‐Implementierung testen.
+
+### Übungsblatt 17 
+#### Aufgabe 1: (Streams, Sockets) 
+- Schreiben Sie einen TCP Server, der wiederholt Textzeilen von einem Client empfangen kann. Der Server sendet dem Client nach jeder empfangenen Zeile ein OK zurück.
+- Schreiben Sie einen TCP Client, der wiederholt von der Standardeingabe Textzeilen liest und diese an den Server aus Aufgabenteil a) sendet.
+- Verwenden Sie das Gerüst aus den vorherigen Aufgabenteilen um das Spiel Galgenmännchen über das Netzwerk umzusetzen. Der Server soll sich den Begriff ausdenken. Der Client soll wiederholt versuchen, den Begriff zu erraten. Die Regeln sind aus Programmieren I bekannt! 
+
+#### Aufgabe 2: (Streams, Object Serialization, Sockets) 
+- Ändern Sie den TCP Server aus Aufgabe 1a) so, dass er wiederholt ein Objekt der Klasse Person (mit Vorname, Nachname und Telefonnummer) entgegennehmen kann. Jedes entgegengenommene Objekt soll er fortlaufend hintereinander in die gleiche Datei schreiben.
+- Ändern Sie den TCP Client aus Aufgabe 1b) dahingehend, dass er vom Nutzer wiederholt Vorname, Nachname und Telefonnummer einer Person einliest, daraus ein Personenobjekt erstellt und dieses Personenobjekt an den TCP Server sendet. 
+
+#### Aufgabe 3: (Generics, Stack) 
+Auf Übungsblatt 13 Aufgabe 3 haben sie mit Hilfe einer Liste einen Stack implementiert. Löschen Sie die Annotation @SuppressWarnings aus dem Quellcode und verwenden Sie Generics so, dass Sie keine Warnungen mehr bekommen. Bei der Deklaration einer Referenz auf den Stack sowie bei der Instanziierung soll es möglich sein, eine Typangabe mitzugeben, bspw. (wenn ihre Klasse GenericStack heißt): 
+```java
+GenericStack<String> s = new GenericStack<>();
+```
+Folgende main‐Methode müsste bei Ausführung mit Ihrer Klasse, „Welt“ und „Hallo“ ausgeben:
+```java
+public static void main(String[] args) {
+    GenericStack<String> s = new GenericStack<>();
+    s.push("Hallo");
+    s.push("Welt");
+    System.out.println(s.pop());
+    System.out.println(s.pop());
+}
+```
+
+#### Aufgabe 4: (JUnit Test) 
+- Formulieren Sie die vorgegebene main‐Methode aus Aufgabe 3 in einen JUnit Test um!
+- Testen Sie ferner das Verhalten der Methode `pop()` auf einen leeren Stack. Wenn ein Fehler Auftritt, was wäre eine gute Abhilfe? Setzen Sie die Maßnahme um!
