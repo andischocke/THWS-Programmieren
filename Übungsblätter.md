@@ -983,3 +983,52 @@ public static void main(String[] args) {
 #### Aufgabe 4: (JUnit Test) 
 - Formulieren Sie die vorgegebene main‐Methode aus Aufgabe 3 in einen JUnit Test um!
 - Testen Sie ferner das Verhalten der Methode `pop()` auf einen leeren Stack. Wenn ein Fehler Auftritt, was wäre eine gute Abhilfe? Setzen Sie die Maßnahme um!
+
+### Übungsblatt 18 
+#### Aufgabe 1:  
+Sie wollen ein Kartenspiel (z.B. Mau Mau, Hearthstone, Solforge, Magic The Gathering, …) programmieren. 
+- Welche (offensichtlichen) Objekte benötigen Sie?
+- Wie würden Sie die Hand eines Spielers abbilden?
+- Erstellen Sie einen Spieler mit einer zufälligen Mau Mau Kartenhand. Auf der Hand darf es keine doppelten Karten geben! 
+
+#### Aufgabe 2:  
+Beim Skat werden die gleichen Karten verwendet wie beim Mau Mau. Nach dem Verteilen der Karten ist für die meisten Spiele beim Skat folgende Sortierung (von links nach rechts) sinnvoll: 
+- Kreuz Bube, Pik Bube, Herz Bube, Karo Bube
+- Kreuz Ass – Kreuz 7 (d. h. Kreuz Ass, Kreuz 10, Kreuz König, Kreuz Dame, Kreuz 9, Kreuz 8, Kreuz 7)
+- Pik Ass – Pik 7
+- Herz Ass – Herz 7
+- Karo Ass – Karo 7
+
+Implementieren Sie das Comparable Interface, so dass eine zufällige Hand von 10 Karten nach obigen Anordnungsregeln sortiert wird. 
+
+Beispiel: 
+> Kreuz Bube, Pik Bube, Herz Bube, Kreuz Ass, Pik 9, Pik 8, Pik 7, Herz Ass, Karo Ass, Karo 7
+
+Hinweis: Überlegen Sie zunächst, welche Klasse das Comparable Interface implementieren muss! 
+
+#### Aufgabe 3: (Iterator, for‐each) 
+Mit dem Befehl `javap ‐c ‐s <Klassenname>` lässt sich der Bytecode einer Klasse ansehen. In der Vorlesung haben wir gesehen, dass folgende for‐each‐Schleife eine Kurzschreibweise für folgende „Langform“ ist, wenn es sich bei `studenten` um eine Collection handelt.
+```java
+for (Student s : studenten) {
+    System.out.println(s);
+}
+```
+```java
+Iterator<Student> iterator = studenten.iterator();
+while (iterator.hasNext()) {
+    Student student = iterator.next();
+    System.out.println(student);
+}
+```
+Wenn studenten ein Array ist, wie sieht dann die entsprechende „Langform“ der for‐each Schleife aus?
+
+### Aufgabe 4: (Collections, Map) 
+Eine Map in Java weist jedem Key genau einen Value zu. Für unseren Vokabeltrainer bedeutet das, dass jedes englische Wort nur genau eine deutsche Bedeutung hat: 
+- to clean ‐> reinigen
+- to expand ‐> vergrößern 
+
+Implementieren Sie mit Hilfe der Collection‐Klassen eine MultiMap, mit der es möglich ist, einem englischen Begriff, mehrere deutsche Begriffe zuzuordnen: 
+- to clean ‐> reinigen, säubern, putzen
+- to expand ‐> vergrößern, wachsen 
+
+Es genügt, wenn Sie eine sinnvolle put und get Methode implementieren. Mit welcher Kombination von Collection‐Klassen lässt sich eine solche MultiMap umsetzen? 
