@@ -925,3 +925,31 @@ long startTime = System.currentTimeMillis();
 long endTime = System.currentTimeMillis();
 long duration = endTime - startTime;
 ```
+
+### Übungsblatt 16 
+#### Aufgabe 1: (Character Streams, Exception) 
+- Welche Stream/Reader‐Klasse eignet sich besonders gut, um zeilenweise zu lesen?
+- Schreiben Sie eine Methode splitStudiengaenge(String dateiname), welche eine Datei ausliest, und deren Inhalt organisiert nach Studiengängen zeilenweise in drei unterschiedliche Dateien schreibt. Der Name der Quelldatei wird als Methodenparameter übergeben. Der Inhalt der Quelldatei besteht aus einer beliebigen Anzahl Matrikelnummern unterschiedlicher Studiengänge, die zeilenweise als Character gespeichert sind. Die Matrikelnummern sind siebenstellig und folgenden Studiengängen zugeordnet: 5000000-5099999 Studiengang WInf, 5100000-5199999 Studiengang Inf, 6100000-6199999 Studiengang EC. Die drei Zieldateien heißen WInfNr.txt, InfNr.txt und ECNr.txt, und sollen nach dem Aufteilen ausschließlich die Matrikelnummern der jeweiligen Studiengänge aus der Quelldatei beinhalten. Handelt es sich bei einem ausgelesen Wert um eine ungültige Matrikelnummer, wirft die Methode eine Ausnahme Abbildung 1: Beispieldatei mit Matrikelnummern vom Typ MatrikelNummerException. Berücksichtigen Sie bitte auch, dass Sie Ströme schließen, wenn diese nicht mehr benötigt werden.
+- Schreiben Sie eine main‐Methode, welche die Datei MatrNr.txt mit Hilfe der Methode splitStudiengaenge(String dateiname) ausliest und in die entsprechenden Dateien aufteilt. Wird beim Ausführen der Methode splitStudiengaenge(String dateiname) eine Exception geworfen, wird die erzeugte Meldung auf der Standardausgabe angezeigt und die main Methode beendet.  
+
+#### Aufgabe 2: (Unit Tests) 
+Gegeben Sei folgende Methode zur Berechnung des Kreisvolumens: 
+```java
+public class Kugelvolumen {
+    public static double berechneKugelvolumen(double radius) {
+        return 4.0 / 3.0 * Math.PI * radius * radius * radius;
+    }
+}
+```
+- Suchen Sie nach einer geeigneten assert‐Methode, die es erlaubt, double Werte zu vergleichen.
+- Schreiben Sie einen Unit Test, der überprüft, ob die Berechnung bei einem Radius von 0, 1, 5 und ‐1 stimmt.
+- Passen Sie die Methode berechneKugelvolumen an, so dass sie die Tests besteht! Was ist eine sinnvolle Maßnahme bei der Übermittlung eines negativen Radius?
+
+### Aufgabe 3: (Streams, Unit Tests) 
+Gegeben sei der ToUpperCaseWriter aus der Vorlesung. 
+- Für welche Methoden müssen Sie Tests schreiben?
+- Schreiben Sie eine ausreichende Zahl an Tests für den ToUpperCaseWriter.
+
+### Aufgabe 4: (Unit Tests) 
+- Sie haben in der Aufgabe 13.1 in der Klasse LäuferImpl den Algorithmus zur Festlegung der erlaubten Felder auf einem Schachbrett implementiert. Schreiben Sie dazu geeignete Testfälle.
+- In der Aufgabe 13.2 haben sie einen Stack mit Hilfe einer Liste implementiert. Schreiben Sie hierzu geeignete Unit Tests, die das Verhalten der Stack‐Implementierung testen.
